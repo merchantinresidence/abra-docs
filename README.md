@@ -38,11 +38,11 @@ For example, you can change the colors and the padding to match your online stor
 | --------------------------------- | -------------------------------------------------------------------------------------- |
 | `.abra-announcement-bar-block`    | The element wrapping the announcement bar                                              |
 | `.abra-announcement-bar`          | The root element                                                                       |
+| `.abra-announcement-bar--compact` | A modifier class applied to the root element when the compact style setting is enabled |
 | `.abra-announcement-bar__item`    | The element wrapping the text, or link if present                                      |
 | `.abra-announcement-bar__link`    | The link element                                                                       |
 | `.abra-announcement-bar__heading` | The element used for heading content                                                   |
 | `.abra-announcement-bar__text`    | The element used for content                                                           |
-| `.abra-announcement-bar--compact` | A modifier class applied to the root element when the compact style setting is enabled |
 
 For example, you can change the heading element entirely.
 
