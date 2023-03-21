@@ -54,7 +54,7 @@ For example, you can change the heading element entirely.
 }
 ```
 
-### JavaScript
+### JavaScript listeners
 
 #### `abra:announcement-bar:rendered`
 
@@ -66,7 +66,7 @@ This event is dispatched after the announcement bar renders from a promotion bei
 | link    | The URL for the link       | string \| undefined |
 | text    | The text for the paragraph | string \| undefined |
 
-You can listen to this event and run additional logic.
+For example, you can listen to this event and run additional logic.
 
 ```javascript
 window.addEventListener('abra:announcement-bar:rendered', event => {
@@ -74,4 +74,60 @@ window.addEventListener('abra:announcement-bar:rendered', event => {
     console.log('The heading has changed');
   }
 });
+```
+
+## Popup
+
+### JavaScript listeners
+
+#### `abra:popup:opened`
+
+This event is dispatched after the popup is opened from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:popup:opened', event => {
+  console.log('The popup opened');
+});
+```
+
+#### `abra:popup:closed`
+
+This event is dispatched after the popup is closed from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:popup:closed', event => {
+  console.log('The popup closed');
+});
+```
+
+### JavaScript dispatchers
+
+#### `abra:popup:open`
+
+You can dispatch this event to programatically open the popup.
+
+For example 1, you can open the popup.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:popup:open'));
+```
+
+For example 2, you can open the popup and set it to automatically close after 3 seconds.
+
+```javascript
+window.dispatchEvent(
+  new CustomEvent('abra:popup:open', { detail: { autoHide: 3000 } }),
+);
+```
+
+#### `abra:popup:close`
+
+You can dispatch this event to programatically close the popup.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:popup:close'));
 ```
