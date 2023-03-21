@@ -1,6 +1,6 @@
-# Abra SDK
+# Abra Developer Docs
 
-Welcome to Abra's developer documentations. We've built this Shopify app to be flexible and extensible. We know that your business needs as a merchant are diverse and we want Abra to work with, not against you.
+Welcome to Abra's developer docs! We know that your business needs as a merchant are diverse and we want Abra to work for you, not against you.
 
 Many of our components are customizable at different levels depending on how much you need to change. We'll walk through each level in detail.
 
