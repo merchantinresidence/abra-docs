@@ -1,4 +1,4 @@
-# Abra.js <small>1.0.0</small>
+# Abra Developer Docs <small>1.0.0</small>
 
 > 💸 Your Shopify Promotion SDK by Abra 💸
 
