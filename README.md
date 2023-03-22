@@ -109,9 +109,15 @@ This event is dispatched after the announcement bar is shown from a promotion be
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-window.addEventListener('abra:announcement-bar:shown', event => {
-  console.log('The announcement bar is visible');
-});
+const removeListener = window.Abra.AnnouncementBar.addListener(
+  'shown',
+  event => {
+    console.log('The announcement bar is visible');
+  },
+);
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 #### `abra:announcement-bar:hidden`
@@ -121,9 +127,15 @@ This event is dispatched after the announcement bar is hidden from a promotion b
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-window.addEventListener('abra:announcement-bar:hidden', event => {
-  console.log('The announcement bar is hidden');
-});
+const removeListener = window.Abra.AnnouncementBar.addListener(
+  'hidden',
+  event => {
+    console.log('The announcement bar is hidden');
+  },
+);
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 ## Banner
@@ -192,7 +204,7 @@ You can dispatch this event to programatically show a banner, where `{{ id }}` i
 For example, you can show a banner with the id of `banner-1`.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:banner:banner-1:show'));
+window.Abra.Banner.show('banner-1');
 ```
 
 #### `abra:banner:{{ id }}:hide`
@@ -202,7 +214,7 @@ You can dispatch this event to programatically hide a banner, where `{{ id }}` i
 For example, you can hide a banner with the id of `banner-1`.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:banner:banner-1:hide'));
+window.Abra.Banner.hide('banner-1');
 ```
 
 ### JavaScript events
@@ -214,9 +226,16 @@ This event is dispatched after the banner is shown from a promotion being applie
 For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
 ```javascript
-window.addEventListener('abra:banner:banner-1:shown', event => {
-  console.log('The banner is visible');
-});
+const removeListener = window.Abra.Banner.addListener(
+  'banner-1',
+  'shown',
+  event => {
+    console.log('banner-1 is visible');
+  },
+);
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 #### `abra:banner:{{ id }}:hidden`
@@ -226,9 +245,16 @@ This event is dispatched after the banner is hidden from a promotion being appli
 For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
 ```javascript
-window.addEventListener('abra:banner:banner-1:hidden', event => {
-  console.log('The banner is hidden');
-});
+const removeListener = window.Abra.Banner.addListener(
+  'banner-1',
+  'hidden',
+  event => {
+    console.log('banner-1 is hidden');
+  },
+);
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 ## Popup
@@ -270,7 +296,7 @@ For example, you can change the colors and the spacing to match your online stor
 | `.abra-popup`               | The root element                                               |
 | `.abra-popup--bottom-left`  | A modifier class applied to the root element for placement     |
 | `.abra-popup--bottom-right` | A modifier class applied to the root element for placement     |
-| `.abra-popup--open`         | A modifier class applied to the root element to open the popup |
+| `.abra-popup--show`         | A modifier class applied to the root element to show the popup |
 | `.abra-popup__close`        | The element wrapping the close button                          |
 | `.abra-popup__close-button` | The close button element                                       |
 | `.abra-popup__text`         | The element used for content                                   |
@@ -293,15 +319,13 @@ You can dispatch this event to programatically open the popup.
 For example 1, you can open the popup.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:popup:open'));
+window.Abra.Popup.open();
 ```
 
 For example 2, you can open the popup and set it to automatically close after 3 seconds.
 
 ```javascript
-window.dispatchEvent(
-  new CustomEvent('abra:popup:open', { detail: { autoclose: 3000 } }),
-);
+window.Abra.Popup.open({ autohide: 3000 });
 ```
 
 #### `abra:popup:close`
@@ -309,7 +333,7 @@ window.dispatchEvent(
 You can dispatch this event to programatically close the popup.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:popup:close'));
+window.Abra.Popup.close();
 ```
 
 ### JavaScript events
@@ -321,9 +345,12 @@ This event is dispatched after the popup is opened from a promotion being applie
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-window.addEventListener('abra:popup:opened', event => {
+const removeListener = window.Abra.Popup.addListener('opened', event => {
   console.log('The popup opened');
 });
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 #### `abra:popup:closed`
@@ -333,9 +360,12 @@ This event is dispatched after the popup is closed from a promotion being applie
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-window.addEventListener('abra:popup:closed', event => {
+const removeListener = window.Abra.Popup.addListener('closed', event => {
   console.log('The popup closed');
 });
+
+// Once you're ready to remove the listener
+removeListener();
 ```
 
 ## Price
