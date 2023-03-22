@@ -166,12 +166,12 @@ For example 1, you can show a given banner with the identifier.
 window.dispatchEvent(new CustomEvent('abra:banner:banner-1:show'));
 ```
 
-#### `abra:banner:{{ id }}:close`
+#### `abra:banner:{{ id }}:hide`
 
-You can dispatch this event to programatically close a banner.
+You can dispatch this event to programatically hide a banner.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:banner:banner-1:close'));
+window.dispatchEvent(new CustomEvent('abra:banner:banner-1:hide'));
 ```
 
 ## Popup
