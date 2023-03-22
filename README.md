@@ -40,6 +40,7 @@ For example, you can change the colors and the padding to match your online stor
 | `.abra-announcement-bar-block`    | The element wrapping the announcement bar                                              |
 | `.abra-announcement-bar`          | The root element                                                                       |
 | `.abra-announcement-bar--compact` | A modifier class applied to the root element when the compact style setting is enabled |
+| `.abra-announcement-bar--show`    | A modifier class applied to the root element to show the announcement bar              |
 | `.abra-announcement-bar__heading` | The element used for heading content                                                   |
 | `.abra-announcement-bar__item`    | The element wrapping the text, or link if present                                      |
 | `.abra-announcement-bar__link`    | The link element                                                                       |
@@ -56,6 +57,22 @@ For example, you can change the heading element entirely.
 ```
 
 ### JavaScript actions
+
+#### `abra:announcement-bar:show`
+
+You can dispatch this event to programatically show the announcement bar.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:announcement-bar:show'));
+```
+
+#### `abra:announcement-bar:hide`
+
+You can dispatch this event to programatically hide the announcement bar.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:announcement-bar:hide'));
+```
 
 #### `abra:announcement-bar:render`
 
@@ -75,6 +92,32 @@ window.dispatchEvent(
     detail: { heading: 'Summer sale', link: '/collections/summer-sale' },
   }),
 );
+```
+
+### JavaScript events
+
+#### `abra:announcement-bar:shown`
+
+This event is dispatched after the announcement bar is shown from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:announcement-bar:shown', event => {
+  console.log('The announcement bar is visible');
+});
+```
+
+#### `abra:announcement-bar:hidden`
+
+This event is dispatched after the announcement bar is hidden from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:announcement-bar:hidden', event => {
+  console.log('The announcement bar is hidden');
+});
 ```
 
 ## Banner
