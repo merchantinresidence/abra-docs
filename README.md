@@ -10,16 +10,17 @@ The announcement bar is an app embed you can enable for your store.
 
 ### CSS variables
 
-| Name                                   | Description                                           | Value   |
-| -------------------------------------- | ----------------------------------------------------- | ------- |
-| `--abra-announcement-bar-background`   | The background of the announcement bar                | #000000 |
-| `--abra-announcement-bar-border-color` | The border color of the announcement bar              | #000000 |
-| `--abra-announcement-bar-color`        | The color of the text in the announcement bar         | #FFFFFF |
-| `--abra-announcement-bar-font-size`    | The font size of the text in the announcement bar     | 14px    |
-| `--abra-announcement-bar-padding-x`    | The horizontal padding inside of the announcement bar | 1rem    |
-| `--abra-announcement-bar-padding-y`    | The vertical padding inside of the announcement bar   | 1rem    |
-| `--abra-announcement-bar-text-align`   | The alignment of the text in the announcement bar     | center  |
-| `--abra-announcement-bar-z-index`      | The z-index of the announcement bar                   | 4       |
+| Name                                   | Description                                                                      | Value      |
+| -------------------------------------- | -------------------------------------------------------------------------------- | ---------- |
+| `--abra-announcement-bar-background`   | The background of the announcement bar                                           | #000000    |
+| `--abra-announcement-bar-border-color` | The border color of the announcement bar                                         | #000000    |
+| `--abra-announcement-bar-color`        | The color of the text in the announcement bar                                    | #FFFFFF    |
+| `--abra-announcement-bar-font-size`    | The font size of the text in the announcement bar                                | 14px       |
+| `--abra-announcement-bar-height`       | The height of the announcement bar<br />You can set this to improve layout shift | calculated |
+| `--abra-announcement-bar-padding-x`    | The horizontal padding inside of the announcement bar                            | 1rem       |
+| `--abra-announcement-bar-padding-y`    | The vertical padding inside of the announcement bar                              | 1rem       |
+| `--abra-announcement-bar-text-align`   | The alignment of the text in the announcement bar                                | center     |
+| `--abra-announcement-bar-z-index`      | The z-index of the announcement bar                                              | 4          |
 
 For example, you can change the colors and the padding to match your online store.
 
