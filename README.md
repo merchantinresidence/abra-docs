@@ -4,6 +4,76 @@ Welcome to Abra's developer docs! We know that your business needs as a merchant
 
 Many of our components are customizable at different levels depending on how much you need to change. We'll walk through each level in detail.
 
+## Global
+
+### CSS classes
+
+| Name                          | Description                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `.abra--initialized`          | A modifier class applied to the body element when window.Abra is initialized                                        |
+| `.abra--activated`            | A modifier class applied to the body element when a promotion is active                                             |
+| `.abra--{{ code }}-activated` | A modifier class, where `{{ code }}` is your promotion code, applied to the body element when a promotion is active |
+
+For example, you can set your background to hearts and your button color to red for a Valentine's Day promotion.
+
+```css
+.abra--valentines-10-activated {
+  background-image: url('https://cdn.shopify.com/hearts.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.abra--valentines-10-activated .btn {
+  background-color: #d6352b;
+  color: #ffffff;
+}
+```
+
+### JavaScript events
+
+#### `initialized`
+
+This event is dispatched once Abra.js is initialized. Because it's possible your script runs before Abra is ready, you'll need to listen to this event on the window object.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:initialized', event => {
+  console.log('Abra is ready');
+});
+```
+
+#### `activated`
+
+This event is dispatched when a promotion is activated.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+const removeListener = window.Abra.addListener('activated', event => {
+  console.log(`${event.detail.promotion} is activate`);
+});
+
+// Once you're ready to remove the listener
+removeListener();
+```
+
+#### `deactivated`
+
+This event is dispatched when a promotion is deactivated.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+const removeListener = window.Abra.addListener('deactivated', event => {
+  console.log('The promotion is deactivated');
+});
+
+// Once you're ready to remove the listener
+removeListener();
+```
+
 ## Announcement bar
 
 The announcement bar is an app embed you can enable for your store.
