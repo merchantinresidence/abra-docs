@@ -106,18 +106,23 @@ For example, you can change the colors and the spacing to match your online stor
 
 ### CSS classes
 
-| Name                    | Description                                                     |
-| ----------------------- | --------------------------------------------------------------- |
-| `.abra-banner-block`    | The element wrapping the banner                                 |
-| `.abra-banner`          | The root element                                                |
-| `.abra-banner--show`    | A modifier class applied to the root element to show the banner |
-| `.abra-banner__heading` | The element used for heading content                            |
-| `.abra-banner__link`    | The link element                                                |
-| `.abra-banner__text`    | The element used for content                                    |
+| Name                     | Description                                                        |
+| ------------------------ | ------------------------------------------------------------------ |
+| `.abra-banner-block`     | The element wrapping the banner                                    |
+| `.abra-banner`           | The root element                                                   |
+| `.abra-banner--show`     | A modifier class applied to the root element to show the banner    |
+| `.abra-banner--{{ id }}` | A modifier class applied to the root element for a specific banner |
+| `.abra-banner__heading`  | The element used for heading content                               |
+| `.abra-banner__link`     | The link element                                                   |
+| `.abra-banner__text`     | The element used for content                                       |
 
 For example, you can change the text element entirely.
 
 ```css
+.abra-banner--banner-1 {
+  background-color: purple;
+}
+
 .abra-banner__link {
   text-decoration: none;
 }
