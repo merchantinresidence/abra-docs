@@ -128,13 +128,35 @@ For example, you can change the text element entirely.
 }
 ```
 
+### JavaScript actions
+
+#### `abra:banner:{{ id }}:show`
+
+You can dispatch this event to programatically show a banner, where `{{ id }}` is the identifier from the app block settings.
+
+For example, you can show a banner with the id of `banner-1`.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:banner:banner-1:show'));
+```
+
+#### `abra:banner:{{ id }}:hide`
+
+You can dispatch this event to programatically hide a banner, where `{{ id }}` is the identifier from the app block settings.
+
+For example, you can hide a banner with the id of `banner-1`.
+
+```javascript
+window.dispatchEvent(new CustomEvent('abra:banner:banner-1:hide'));
+```
+
 ### JavaScript events
 
 #### `abra:banner:{{ id }}:shown`
 
-This event is dispatched after the banner is shown from a promotion being applied.
+This event is dispatched after the banner is shown from a promotion being applied, where `{{ id }}` is the identifier from the app block settings.
 
-For example, you can listen to this event and run additional logic.
+For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
 ```javascript
 window.addEventListener('abra:banner:banner-1:shown', event => {
@@ -144,34 +166,14 @@ window.addEventListener('abra:banner:banner-1:shown', event => {
 
 #### `abra:banner:{{ id }}:hidden`
 
-This event is dispatched after the banner is hidden from a promotion being applied.
+This event is dispatched after the banner is hidden from a promotion being applied, where `{{ id }}` is the identifier from the app block settings.
 
-For example, you can listen to this event and run additional logic.
+For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
 ```javascript
 window.addEventListener('abra:banner:banner-1:hidden', event => {
   console.log('The banner is hidden');
 });
-```
-
-### JavaScript actions
-
-#### `abra:banner:{{ id }}:show`
-
-You can dispatch this event to programatically show a banner.
-
-For example 1, you can show a given banner with the identifier.
-
-```javascript
-window.dispatchEvent(new CustomEvent('abra:banner:banner-1:show'));
-```
-
-#### `abra:banner:{{ id }}:hide`
-
-You can dispatch this event to programatically hide a banner.
-
-```javascript
-window.dispatchEvent(new CustomEvent('abra:banner:banner-1:hide'));
 ```
 
 ## Popup
@@ -225,32 +227,6 @@ For example, you can change the text element entirely.
 }
 ```
 
-### JavaScript events
-
-#### `abra:popup:opened`
-
-This event is dispatched after the popup is opened from a promotion being applied.
-
-For example, you can listen to this event and run additional logic.
-
-```javascript
-window.addEventListener('abra:popup:opened', event => {
-  console.log('The popup opened');
-});
-```
-
-#### `abra:popup:closed`
-
-This event is dispatched after the popup is closed from a promotion being applied.
-
-For example, you can listen to this event and run additional logic.
-
-```javascript
-window.addEventListener('abra:popup:closed', event => {
-  console.log('The popup closed');
-});
-```
-
 ### JavaScript actions
 
 #### `abra:popup:open`
@@ -277,4 +253,30 @@ You can dispatch this event to programatically close the popup.
 
 ```javascript
 window.dispatchEvent(new CustomEvent('abra:popup:close'));
+```
+
+### JavaScript events
+
+#### `abra:popup:opened`
+
+This event is dispatched after the popup is opened from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:popup:opened', event => {
+  console.log('The popup opened');
+});
+```
+
+#### `abra:popup:closed`
+
+This event is dispatched after the popup is closed from a promotion being applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+window.addEventListener('abra:popup:closed', event => {
+  console.log('The popup closed');
+});
 ```
