@@ -312,56 +312,56 @@ For example, you can change the text element entirely.
 
 ### JavaScript actions
 
-#### `abra:popup:open`
+#### `abra:popup:show`
 
-You can dispatch this event to programatically open the popup.
+You can dispatch this event to programatically show the popup.
 
-For example 1, you can open the popup.
+For example 1, you can show the popup.
 
 ```javascript
-window.Abra.Popup.open();
+window.Abra.Popup.show();
 ```
 
-For example 2, you can open the popup and set it to automatically close after 3 seconds.
+For example 2, you can show the popup and set it to automatically close after 3 seconds.
 
 ```javascript
-window.Abra.Popup.open({ autohide: 3000 });
+window.Abra.Popup.show({ autohide: 3000 });
 ```
 
-#### `abra:popup:close`
+#### `abra:popup:hide`
 
-You can dispatch this event to programatically close the popup.
+You can dispatch this event to programatically hide the popup.
 
 ```javascript
-window.Abra.Popup.close();
+window.Abra.Popup.hide();
 ```
 
 ### JavaScript events
 
-#### `abra:popup:opened`
+#### `abra:popup:shown`
 
-This event is dispatched after the popup is opened from a promotion being applied.
+This event is dispatched after the popup is visible from a promotion being applied.
 
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-const removeListener = window.Abra.Popup.addListener('opened', event => {
-  console.log('The popup opened');
+const removeListener = window.Abra.Popup.addListener('shown', event => {
+  console.log('The popup is visible');
 });
 
 // Once you're ready to remove the listener
 removeListener();
 ```
 
-#### `abra:popup:closed`
+#### `abra:popup:hidden`
 
-This event is dispatched after the popup is closed from a promotion being applied.
+This event is dispatched after the popup is hidden from a promotion being applied.
 
 For example, you can listen to this event and run additional logic.
 
 ```javascript
-const removeListener = window.Abra.Popup.addListener('closed', event => {
-  console.log('The popup closed');
+const removeListener = window.Abra.Popup.addListener('hidden', event => {
+  console.log('The popup is hidden');
 });
 
 // Once you're ready to remove the listener
