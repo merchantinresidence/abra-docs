@@ -2,9 +2,9 @@
 
 Welcome to Abra's developer docs! We know that your business needs as a merchant are diverse and we want Abra to work for you, not against you.
 
-Many of our components are customizable at different levels depending on how much you need to change. We'll walk through each level in detail.
-
 ## Global
+
+These are global CSS and JavaScript integration points for you to use in your theme.
 
 ### CSS classes
 
