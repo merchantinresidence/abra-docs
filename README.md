@@ -58,7 +58,7 @@ For example, you can change the heading element entirely.
 
 ### JavaScript actions
 
-#### `abra:announcement-bar:show`
+#### `show`
 
 You can dispatch this event to programatically show the announcement bar.
 
@@ -73,7 +73,7 @@ window.Abra.AnnouncementBar.show({
 });
 ```
 
-#### `abra:announcement-bar:hide`
+#### `hide`
 
 You can dispatch this event to programatically hide the announcement bar.
 
@@ -81,7 +81,7 @@ You can dispatch this event to programatically hide the announcement bar.
 window.Abra.AnnouncementBar.hide();
 ```
 
-#### `abra:announcement-bar:render`
+#### `render`
 
 You can dispatch this event to programatically render the announcement bar with new options.
 
@@ -102,7 +102,7 @@ window.Abra.AnnouncementBar.render({
 
 ### JavaScript events
 
-#### `abra:announcement-bar:shown`
+#### `shown`
 
 This event is dispatched after the announcement bar is shown from a promotion being applied.
 
@@ -120,7 +120,7 @@ const removeListener = window.Abra.AnnouncementBar.addListener(
 removeListener();
 ```
 
-#### `abra:announcement-bar:hidden`
+#### `hidden`
 
 This event is dispatched after the announcement bar is hidden from a promotion being applied.
 
@@ -197,9 +197,9 @@ For example, you can change the text element entirely.
 
 ### JavaScript actions
 
-#### `abra:banner:{{ id }}:show`
+#### `show`
 
-You can dispatch this event to programatically show a banner, where `{{ id }}` is the identifier from the app block settings.
+You can dispatch this event to programatically show a banner, where the first parameter is the identifier from the app block settings.
 
 For example, you can show a banner with the id of `banner-1`.
 
@@ -207,9 +207,9 @@ For example, you can show a banner with the id of `banner-1`.
 window.Abra.Banner.show('banner-1');
 ```
 
-#### `abra:banner:{{ id }}:hide`
+#### `hide`
 
-You can dispatch this event to programatically hide a banner, where `{{ id }}` is the identifier from the app block settings.
+You can dispatch this event to programatically hide a banner, where the first parameter is the identifier from the app block settings.
 
 For example, you can hide a banner with the id of `banner-1`.
 
@@ -219,9 +219,9 @@ window.Abra.Banner.hide('banner-1');
 
 ### JavaScript events
 
-#### `abra:banner:{{ id }}:shown`
+#### `shown`
 
-This event is dispatched after the banner is shown from a promotion being applied, where `{{ id }}` is the identifier from the app block settings.
+This event is dispatched after the banner is shown from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
 For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
@@ -238,9 +238,9 @@ const removeListener = window.Abra.Banner.addListener(
 removeListener();
 ```
 
-#### `abra:banner:{{ id }}:hidden`
+#### `hidden`
 
-This event is dispatched after the banner is hidden from a promotion being applied, where `{{ id }}` is the identifier from the app block settings.
+This event is dispatched after the banner is hidden from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
 For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
 
@@ -312,7 +312,7 @@ For example, you can change the text element entirely.
 
 ### JavaScript actions
 
-#### `abra:popup:show`
+#### `show`
 
 You can dispatch this event to programatically show the popup.
 
@@ -328,7 +328,7 @@ For example 2, you can show the popup and set it to automatically close after 3 
 window.Abra.Popup.show({ autohide: 3000 });
 ```
 
-#### `abra:popup:hide`
+#### `hide`
 
 You can dispatch this event to programatically hide the popup.
 
@@ -338,7 +338,7 @@ window.Abra.Popup.hide();
 
 ### JavaScript events
 
-#### `abra:popup:shown`
+#### `shown`
 
 This event is dispatched after the popup is visible from a promotion being applied.
 
@@ -353,7 +353,7 @@ const removeListener = window.Abra.Popup.addListener('shown', event => {
 removeListener();
 ```
 
-#### `abra:popup:hidden`
+#### `hidden`
 
 This event is dispatched after the popup is hidden from a promotion being applied.
 
