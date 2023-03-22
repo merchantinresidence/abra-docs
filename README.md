@@ -18,8 +18,8 @@ The announcement bar is an app embed you can enable for your store.
 | `--abra-announcement-bar-font-size`    | The font size of the text in the announcement bar     | 14px    |
 | `--abra-announcement-bar-text-align`   | The alignment of the text in the announcement bar     | center  |
 | `--abra-announcement-bar-z-index`      | The z-index of the announcement bar                   | 4       |
-| `--abra-announcement-bar-py`           | The vertical padding inside of the announcement bar   | 1rem    |
-| `--abra-announcement-bar-px`           | The horizontal padding inside of the announcement bar | 1rem    |
+| `--abra-announcement-bar-padding-y`    | The vertical padding inside of the announcement bar   | 1rem    |
+| `--abra-announcement-bar-padding-x`    | The horizontal padding inside of the announcement bar | 1rem    |
 
 For example, you can change the colors and the padding to match your online store.
 
@@ -27,8 +27,8 @@ For example, you can change the colors and the padding to match your online stor
 :root {
   --abra-announcement-bar-background: rgba(246, 246, 247, 1);
   --abra-announcement-bar-color: rgba(32, 34, 35, 1);
-  --abra-announcement-bar-py: 1.25rem;
-  --abra-announcement-bar-px: 2rem;
+  --abra-announcement-bar-padding-y: 1.25rem;
+  --abra-announcement-bar-padding-x: 2rem;
 }
 ```
 
@@ -54,11 +54,11 @@ For example, you can change the heading element entirely.
 }
 ```
 
-### JavaScript listeners
+### JavaScript dispatchers
 
-#### `abra:announcement-bar:rendered`
+#### `abra:announcement-bar:render`
 
-This event is dispatched after the announcement bar renders from a promotion being applied. The event will return the value of the element that has changed.
+You can dispatch this event to programatically render the announcement bar with new options.
 
 | Name    | Description                | Value               |
 | ------- | -------------------------- | ------------------- |
@@ -66,17 +66,66 @@ This event is dispatched after the announcement bar renders from a promotion bei
 | link    | The URL for the link       | string \| undefined |
 | text    | The text for the paragraph | string \| undefined |
 
-For example, you can listen to this event and run additional logic.
+For example, you can render the announcement bar with a link.
 
 ```javascript
-window.addEventListener('abra:announcement-bar:rendered', event => {
-  if (event.detail.heading) {
-    console.log('The heading has changed');
-  }
-});
+window.dispatchEvent(
+  new CustomEvent('abra:announcement-bar:render', {
+    detail: { heading: 'Summer sale', link: '/collections/summer-sale' },
+  }),
+);
 ```
 
 ## Popup
+
+The popup is an app embed you can enable for your store.
+
+### CSS variables
+
+| Name                           | Description                                     | Value   |
+| ------------------------------ | ----------------------------------------------- | ------- |
+| `--abra-popup-background`      | The background of the popup                     | #000000 |
+| `--abra-popup-close-icon-size` | The size of the close icon                      | 1.6rem  |
+| `--abra-popup-color`           | The color of the text in the popup              | #FFFFFF |
+| `--abra-popup-font-size`       | The font size of the text in the popup          | 14px    |
+| `--abra-popup-gap`             | The space between the text and the close button | 1rem    |
+| `--abra-popup-margin-x`        | The horizontal space around the popup           | 1rem    |
+| `--abra-popup-margin-y`        | The vertical space around the popup             | 1rem    |
+| `--abra-popup-padding-x`       | The horizontal padding inside of the popup      | 1rem    |
+| `--abra-popup-padding-y`       | The vertical padding inside of the popup        | 1rem    |
+| `--abra-popup-z-index`         | The z-index of the popup                        | 4       |
+
+For example, you can change the colors and the spacing to match your online store.
+
+```css
+:root {
+  --abra-popup-background: rgba(246, 246, 247, 1);
+  --abra-popup-color: rgba(32, 34, 35, 1);
+  --abra-popup-gap: 2rem;
+  --abra-popup-padding-x: 2rem;
+  --abra-popup-padding-y: 1.25rem;
+}
+```
+
+### CSS classes
+
+| Name                        | Description                                                    |
+| --------------------------- | -------------------------------------------------------------- |
+| `.abra-popup-block`         | The element wrapping the popup                                 |
+| `.abra-popup`               | The root element                                               |
+| `.abra-popup--open`         | A modifier class applied to the root element to open the popup |
+| `.abra-popup__close`        | The element wrapping the close button                          |
+| `.abra-popup__close-button` | The close button element                                       |
+| `.abra-popup__text`         | The element used for content                                   |
+
+For example, you can change the text element entirely.
+
+```css
+.abra-popup__text {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+```
 
 ### JavaScript listeners
 
@@ -120,7 +169,7 @@ For example 2, you can open the popup and set it to automatically close after 3 
 
 ```javascript
 window.dispatchEvent(
-  new CustomEvent('abra:popup:open', { detail: { autoHide: 3000 } }),
+  new CustomEvent('abra:popup:open', { detail: { autoclose: 3000 } }),
 );
 ```
 
