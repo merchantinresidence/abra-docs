@@ -285,3 +285,51 @@ window.addEventListener('abra:popup:closed', event => {
   console.log('The popup closed');
 });
 ```
+
+## Price
+
+The price element after you've activated a promotion on your store.
+
+### CSS variables
+
+| Name                              | Description                                        | Value        |
+| --------------------------------- | -------------------------------------------------- | ------------ |
+| `--abra-price-font-size`          | The font size for both prices                      | 1rem         |
+| `--abra-price-gap`                | The space between the regular price and sale price | 0.6rem       |
+| `--abra-regular-price-color`      | The color of the regular price                     | unset        |
+| `--abra-regular-price-decoration` | The text decoration of the regular price           | line-through |
+| `--abra-regular-price-font-size`  | The font size of the regular price                 | 0.9em        |
+| `--abra-sale-price-color`         | The color of the sale price                        | #FF0000      |
+| `--abra-sale-price-decoration`    | The text decoration of the sale price              | none         |
+| `--abra-sale-price-font-size`     | The font size of the sale price                    | unset        |
+
+For example, you can change the colors and the spacing to match your online store.
+
+```css
+.abra-price {
+  --abra-price-gap: 2rem;
+  --abra-regular-price-color: rgba(32, 34, 35, 1);
+  --abra-sale-price-color: #0000ff;
+}
+```
+
+### CSS classes
+
+| Name                         | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `.abra-price`                | The root element                              |
+| `.abra-price__item`          | A price element                               |
+| `.abra-price__item--regular` | A modifier class applied to the regular price |
+| `.abra-price__item--sale`    | A modifier class applied to the sale price    |
+
+For example, you can change the sale price entirely.
+
+```css
+.abra-price__item--sale {
+  background-color: red;
+  border-radius: 50%;
+  color: black;
+  letter-spacing: 0.1rem;
+  padding: 0.6rem 1rem;
+}
+```
