@@ -63,7 +63,14 @@ For example, you can change the heading element entirely.
 You can dispatch this event to programatically show the announcement bar.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:announcement-bar:show'));
+window.Abra.AnnouncementBar.show();
+
+// or
+
+window.Abra.AnnouncementBar.show({
+  heading: 'Summer sale',
+  link: '/collections/summer-sale',
+});
 ```
 
 #### `abra:announcement-bar:hide`
@@ -71,7 +78,7 @@ window.dispatchEvent(new CustomEvent('abra:announcement-bar:show'));
 You can dispatch this event to programatically hide the announcement bar.
 
 ```javascript
-window.dispatchEvent(new CustomEvent('abra:announcement-bar:hide'));
+window.Abra.AnnouncementBar.hide();
 ```
 
 #### `abra:announcement-bar:render`
@@ -87,11 +94,10 @@ You can dispatch this event to programatically render the announcement bar with 
 For example, you can render the announcement bar with a link.
 
 ```javascript
-window.dispatchEvent(
-  new CustomEvent('abra:announcement-bar:render', {
-    detail: { heading: 'Summer sale', link: '/collections/summer-sale' },
-  }),
-);
+window.Abra.AnnouncementBar.render({
+  heading: 'Summer sale',
+  link: '/collections/summer-sale',
+});
 ```
 
 ### JavaScript events
