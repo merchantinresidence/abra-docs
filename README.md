@@ -219,6 +219,8 @@ For example, you can change the colors and the spacing to match your online stor
 | --------------------------- | -------------------------------------------------------------- |
 | `.abra-popup-block`         | The element wrapping the popup                                 |
 | `.abra-popup`               | The root element                                               |
+| `.abra-popup--bottom-left`  | A modifier class applied to the root element for placement     |
+| `.abra-popup--bottom-right` | A modifier class applied to the root element for placement     |
 | `.abra-popup--open`         | A modifier class applied to the root element to open the popup |
 | `.abra-popup__close`        | The element wrapping the close button                          |
 | `.abra-popup__close-button` | The close button element                                       |
