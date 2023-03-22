@@ -54,7 +54,7 @@ For example, you can change the heading element entirely.
 }
 ```
 
-### JavaScript dispatchers
+### JavaScript actions
 
 #### `abra:announcement-bar:render`
 
@@ -127,7 +127,7 @@ For example, you can change the text element entirely.
 }
 ```
 
-### JavaScript listeners
+### JavaScript events
 
 #### `abra:popup:opened`
 
@@ -153,7 +153,7 @@ window.addEventListener('abra:popup:closed', event => {
 });
 ```
 
-### JavaScript dispatchers
+### JavaScript actions
 
 #### `abra:popup:open`
 
