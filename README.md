@@ -275,6 +275,12 @@ For example, you can show a banner with the id of `banner-1`.
 
 ```javascript
 window.Abra.Banner.show('banner-1');
+
+// or
+
+window.Abra.Banner.show('banner-1', {
+  text: 'Get a free sample',
+});
 ```
 
 #### `hide`
@@ -390,6 +396,12 @@ For example 1, you can show the popup.
 
 ```javascript
 window.Abra.Popup.show();
+
+// or
+
+window.Abra.Popup.show({
+  text: '20% off storewide',
+});
 ```
 
 For example 2, you can show the popup and set it to automatically close after 3 seconds.
