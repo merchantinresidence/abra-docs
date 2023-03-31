@@ -8,11 +8,13 @@ These are global CSS and JavaScript integration points for you to use in your th
 
 ### CSS classes
 
-| Name                          | Description                                                                                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `.abra--initialized`          | A modifier class applied to the body element when window.Abra is initialized                                        |
-| `.abra--activated`            | A modifier class applied to the body element when a promotion is active                                             |
-| `.abra--{{ code }}-activated` | A modifier class, where `{{ code }}` is your promotion code, applied to the body element when a promotion is active |
+| Name                          | Description                                                                                                          |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `.abra--initialized`          | A modifier class applied to the body element when window.Abra is initialized                                         |
+| `.abra--activated`            | A modifier class applied to the body element when a promotion is active                                              |
+| `.abra--applied`              | A modifier class applied to the body element when a promotion is applied                                             |
+| `.abra--{{ code }}-activated` | A modifier class, where `{{ code }}` is your promotion code, applied to the body element when a promotion is active  |
+| `.abra--{{ code }}-applied`   | A modifier class, where `{{ code }}` is your promotion code, applied to the body element when a promotion is applied |
 
 For example, you can set your background to hearts and your button color to red for a Valentine's Day promotion.
 
@@ -28,6 +30,56 @@ For example, you can set your background to hearts and your button color to red 
   background-color: #d6352b;
   color: #ffffff;
 }
+```
+
+### JavaScript actions
+
+#### `activateAndApply`
+
+You can call this function to programatically activate and apply a promotion.
+
+```javascript
+window.Abra.activateAndApply('YOUR_CODE');
+```
+
+#### `activate`
+
+You can call this function to programatically activate a promotion. When a promotion is activated and not applied, the customer will see the promotional content, but they won't receive the offers at checkout until they apply it.
+
+```javascript
+window.Abra.activate('YOUR_CODE');
+```
+
+#### `apply`
+
+You can call this function to programatically apply a promotion's offers. When the promotion is applied, the customer will receive the offers at checkout.
+
+```javascript
+window.Abra.apply('YOUR_CODE');
+```
+
+#### `deactivateAndUnapply`
+
+You can call this function to programatically deactivate and unapply a promotion.
+
+```javascript
+window.Abra.deactivateAndUnapply('YOUR_CODE');
+```
+
+#### `deactivate`
+
+You can call this function to programatically activate a promotion. Make sure that the promotion hasn't been applied if you're calling this.
+
+```javascript
+window.Abra.deactivate('YOUR_CODE');
+```
+
+#### `unapply`
+
+You can call this function to programatically unapply a promotion.
+
+```javascript
+window.Abra.unapply('YOUR_CODE');
 ```
 
 ### JavaScript events
@@ -59,6 +111,21 @@ const removeListener = window.Abra.addListener('activated', event => {
 removeListener();
 ```
 
+#### `applied`
+
+This event is dispatched when a promotion's offers have been applied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+const removeListener = window.Abra.addListener('applied', event => {
+  console.log(`${event.detail.promotion} is applied`);
+});
+
+// Once you're ready to remove the listener
+removeListener();
+```
+
 #### `deactivated`
 
 This event is dispatched when a promotion is deactivated.
@@ -68,6 +135,21 @@ For example, you can listen to this event and run additional logic.
 ```javascript
 const removeListener = window.Abra.addListener('deactivated', event => {
   console.log('The promotion is deactivated');
+});
+
+// Once you're ready to remove the listener
+removeListener();
+```
+
+#### `unapplied`
+
+This event is dispatched when a promotion's offers have been unapplied.
+
+For example, you can listen to this event and run additional logic.
+
+```javascript
+const removeListener = window.Abra.addListener('unapplied', event => {
+  console.log('The promotion is unapplied');
 });
 
 // Once you're ready to remove the listener
@@ -129,7 +211,7 @@ For example, you can change the text element entirely.
 
 #### `show`
 
-You can dispatch this event to programatically show the announcement bar.
+You call this function to programatically show the announcement bar.
 
 ```javascript
 window.Abra.AnnouncementBar.show();
@@ -144,7 +226,7 @@ window.Abra.AnnouncementBar.show({
 
 #### `hide`
 
-You can dispatch this event to programatically hide the announcement bar.
+You call this function to programatically hide the announcement bar.
 
 ```javascript
 window.Abra.AnnouncementBar.hide();
@@ -152,7 +234,7 @@ window.Abra.AnnouncementBar.hide();
 
 #### `render`
 
-You can dispatch this event to programatically render the announcement bar with new options.
+You call this function to programatically render the announcement bar with new options.
 
 | Name | Description                | Value               |
 | ---- | -------------------------- | ------------------- |
@@ -267,7 +349,7 @@ For example, you can change the text element entirely.
 
 #### `show`
 
-You can dispatch this event to programatically show a banner, where the first parameter is the identifier from the app block settings.
+You call this function to programatically show a banner, where the first parameter is the identifier from the app block settings.
 
 For example, you can show a banner with the name of `banner-1`.
 
@@ -283,7 +365,7 @@ window.Abra.Banner.show('banner-1', {
 
 #### `hide`
 
-You can dispatch this event to programatically hide a banner, where the first parameter is the identifier from the app block settings.
+You call this function to programatically hide a banner, where the first parameter is the identifier from the app block settings.
 
 For example, you can hide a banner with the name of `banner-1`.
 
@@ -388,7 +470,7 @@ For example, you can change the text element entirely.
 
 #### `show`
 
-You can dispatch this event to programatically show the popup.
+You call this function to programatically show the popup.
 
 For example 1, you can show the popup.
 
@@ -410,7 +492,7 @@ window.Abra.Popup.show({ autohide: 3000 });
 
 #### `hide`
 
-You can dispatch this event to programatically hide the popup.
+You call this function to programatically hide the popup.
 
 ```javascript
 window.Abra.Popup.hide();
