@@ -111,15 +111,14 @@ For example, you can change the colors and the padding to match your online stor
 | `.abra-announcement-bar`          | The root element                                                                       |
 | `.abra-announcement-bar--compact` | A modifier class applied to the root element when the compact style setting is enabled |
 | `.abra-announcement-bar--show`    | A modifier class applied to the root element to show the announcement bar              |
-| `.abra-announcement-bar__heading` | The element used for heading content                                                   |
 | `.abra-announcement-bar__item`    | The element wrapping the text, or link if present                                      |
 | `.abra-announcement-bar__link`    | The link element                                                                       |
 | `.abra-announcement-bar__text`    | The element used for content                                                           |
 
-For example, you can change the heading element entirely.
+For example, you can change the text element entirely.
 
 ```css
-.abra-announcement-bar__heading {
+.abra-announcement-bar__text {
   letter-spacing: 0.1rem;
   line-height: 1.3;
   text-transform: none;
@@ -138,7 +137,7 @@ window.Abra.AnnouncementBar.show();
 // or
 
 window.Abra.AnnouncementBar.show({
-  heading: 'Summer sale',
+  text: 'Summer sale',
   link: '/collections/summer-sale',
 });
 ```
@@ -155,17 +154,16 @@ window.Abra.AnnouncementBar.hide();
 
 You can dispatch this event to programatically render the announcement bar with new options.
 
-| Name    | Description                | Value               |
-| ------- | -------------------------- | ------------------- |
-| heading | The text for the heading   | string \| undefined |
-| link    | The URL for the link       | string \| undefined |
-| text    | The text for the paragraph | string \| undefined |
+| Name | Description                | Value               |
+| ---- | -------------------------- | ------------------- |
+| link | The URL for the link       | string \| undefined |
+| text | The text for the paragraph | string \| undefined |
 
 For example, you can render the announcement bar with a link.
 
 ```javascript
 window.Abra.AnnouncementBar.render({
-  heading: 'Summer sale',
+  text: 'Summer sale',
   link: '/collections/summer-sale',
 });
 ```
@@ -238,15 +236,15 @@ For example, you can change the colors and the spacing to match your online stor
 
 ### CSS classes
 
-| Name                     | Description                                                        |
-| ------------------------ | ------------------------------------------------------------------ |
-| `.abra-banner-block`     | The element wrapping the banner                                    |
-| `.abra-banner`           | The root element                                                   |
-| `.abra-banner--show`     | A modifier class applied to the root element to show the banner    |
-| `.abra-banner--{{ id }}` | A modifier class applied to the root element for a specific banner |
-| `.abra-banner__heading`  | The element used for heading content                               |
-| `.abra-banner__link`     | The link element                                                   |
-| `.abra-banner__text`     | The element used for content                                       |
+| Name                       | Description                                                        |
+| -------------------------- | ------------------------------------------------------------------ |
+| `.abra-banner-block`       | The element wrapping the banner                                    |
+| `.abra-banner`             | The root element                                                   |
+| `.abra-banner--show`       | A modifier class applied to the root element to show the banner    |
+| `.abra-banner--{{ name }}` | A modifier class applied to the root element for a specific banner |
+| `.abra-banner__heading`    | The element used for heading content                               |
+| `.abra-banner__link`       | The link element                                                   |
+| `.abra-banner__text`       | The element used for content                                       |
 
 For example, you can change the text element entirely.
 
@@ -271,7 +269,7 @@ For example, you can change the text element entirely.
 
 You can dispatch this event to programatically show a banner, where the first parameter is the identifier from the app block settings.
 
-For example, you can show a banner with the id of `banner-1`.
+For example, you can show a banner with the name of `banner-1`.
 
 ```javascript
 window.Abra.Banner.show('banner-1');
@@ -287,7 +285,7 @@ window.Abra.Banner.show('banner-1', {
 
 You can dispatch this event to programatically hide a banner, where the first parameter is the identifier from the app block settings.
 
-For example, you can hide a banner with the id of `banner-1`.
+For example, you can hide a banner with the name of `banner-1`.
 
 ```javascript
 window.Abra.Banner.hide('banner-1');
