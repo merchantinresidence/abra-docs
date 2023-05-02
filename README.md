@@ -162,17 +162,20 @@ The announcement bar is an app embed you can enable for your store.
 
 ### CSS variables
 
-| Name                                   | Description                                                                      | Value      |
-| -------------------------------------- | -------------------------------------------------------------------------------- | ---------- |
-| `--abra-announcement-bar-background`   | The background of the announcement bar                                           | #000000    |
-| `--abra-announcement-bar-border-color` | The border color of the announcement bar                                         | #000000    |
-| `--abra-announcement-bar-color`        | The color of the text in the announcement bar                                    | #FFFFFF    |
-| `--abra-announcement-bar-font-size`    | The font size of the text in the announcement bar                                | 14px       |
-| `--abra-announcement-bar-height`       | The height of the announcement bar<br />You can set this to improve layout shift | calculated |
-| `--abra-announcement-bar-padding-x`    | The horizontal padding inside of the announcement bar                            | 1rem       |
-| `--abra-announcement-bar-padding-y`    | The vertical padding inside of the announcement bar                              | 1rem       |
-| `--abra-announcement-bar-text-align`   | The alignment of the text in the announcement bar                                | center     |
-| `--abra-announcement-bar-z-index`      | The z-index of the announcement bar                                              | 4          |
+| Name                                      | Description                                                                      | Value      |
+| ----------------------------------------- | -------------------------------------------------------------------------------- | ---------- |
+| `--abra-announcement-bar-background`      | The background of the announcement bar                                           | #000000    |
+| `--abra-announcement-bar-border-color`    | The border color of the announcement bar                                         | #000000    |
+| `--abra-announcement-bar-color`           | The color of the text in the announcement bar                                    | #FFFFFF    |
+| `--abra-announcement-bar-font-size`       | The font size of the text in the announcement bar                                | 14px       |
+| `--abra-announcement-bar-gap`             | The space between the icon and the text in the announcement bar                  | 1rem       |
+| `--abra-announcement-bar-height`          | The height of the announcement bar<br />You can set this to improve layout shift | calculated |
+| `--abra-announcement-bar-icon-color`      | The color of the icon in the announcement bar                                    | #FFFFFF    |
+| `--abra-announcement-bar-icon-size`       | The size of the icon in the announcement bar                                     | 32px       |
+| `--abra-announcement-bar-justify-content` | The alignment of the text in the announcement bar                                | center     |
+| `--abra-announcement-bar-padding-x`       | The horizontal padding inside of the announcement bar                            | 1rem       |
+| `--abra-announcement-bar-padding-y`       | The vertical padding inside of the announcement bar                              | 1rem       |
+| `--abra-announcement-bar-z-index`         | The z-index of the announcement bar                                              | 4          |
 
 For example, you can change the colors and the padding to match your online store.
 
@@ -187,15 +190,16 @@ For example, you can change the colors and the padding to match your online stor
 
 ### CSS classes
 
-| Name                              | Description                                                                            |
-| --------------------------------- | -------------------------------------------------------------------------------------- |
-| `.abra-announcement-bar-block`    | The element wrapping the announcement bar                                              |
-| `.abra-announcement-bar`          | The root element                                                                       |
-| `.abra-announcement-bar--compact` | A modifier class applied to the root element when the compact style setting is enabled |
-| `.abra-announcement-bar--show`    | A modifier class applied to the root element to show the announcement bar              |
-| `.abra-announcement-bar__item`    | The element wrapping the text, or link if present                                      |
-| `.abra-announcement-bar__link`    | The link element                                                                       |
-| `.abra-announcement-bar__text`    | The element used for content                                                           |
+| Name                              | Description                                                               |
+| --------------------------------- | ------------------------------------------------------------------------- |
+| `.abra-announcement-bar-block`    | The element wrapping the announcement bar                                 |
+| `.abra-announcement-bar`          | The root element                                                          |
+| `.abra-announcement-bar__content` | The element wrapping the text, and icon if present                        |
+| `.abra-announcement-bar__icon`    | The element wrapping the SVG for the icon                                 |
+| `.abra-announcement-bar__item`    | The element wrapping the slide for this content                           |
+| `.abra-announcement-bar__link`    | The link element                                                          |
+| `.abra-announcement-bar__text`    | The element used for content                                              |
+| `.abra-announcement-bar--show`    | A modifier class applied to the root element to show the announcement bar |
 
 For example, you can change the text element entirely.
 
@@ -220,7 +224,6 @@ window.Abra.AnnouncementBar.show();
 
 window.Abra.AnnouncementBar.show({
   text: 'Summer sale',
-  link: '/collections/summer-sale',
 });
 ```
 
@@ -236,17 +239,17 @@ window.Abra.AnnouncementBar.hide();
 
 You call this function to programatically render the announcement bar with new options.
 
-| Name | Description                | Value               |
-| ---- | -------------------------- | ------------------- |
-| link | The URL for the link       | string \| undefined |
-| text | The text for the paragraph | string \| undefined |
+| Name | Description                | Value                                       |
+| ---- | -------------------------- | ------------------------------------------- |
+| icon | The name of the icon       | discount \| gift \| percentage \| undefined |
+| text | The text for the paragraph | string \| undefined                         |
 
-For example, you can render the announcement bar with a link.
+For example, you can render the announcement bar with an icon.
 
 ```javascript
 window.Abra.AnnouncementBar.render({
+  icon: 'gift',
   text: 'Summer sale',
-  link: '/collections/summer-sale',
 });
 ```
 
@@ -294,16 +297,20 @@ The banner is an app block you can add to any page on your store.
 
 ### CSS variables
 
-| Name                          | Description                                 | Value   |
-| ----------------------------- | ------------------------------------------- | ------- |
-| `--abra-banner-background`    | The background of the banner                | #000000 |
-| `--abra-banner-border-radius` | The border radius of the banner             | 0       |
-| `--abra-banner-color`         | The color of the text in the banner         | #FFFFFF |
-| `--abra-banner-font-size`     | The font size of the text in the banner     | 14px    |
-| `--abra-banner-margin-x`      | The horizontal space around the banner      | 1rem    |
-| `--abra-banner-margin-y`      | The vertical space around the banner        | 1rem    |
-| `--abra-banner-padding-x`     | The horizontal padding inside of the banner | 1rem    |
-| `--abra-banner-padding-y`     | The vertical padding inside of the banner   | 1rem    |
+| Name                            | Description                                           | Value   |
+| ------------------------------- | ----------------------------------------------------- | ------- |
+| `--abra-banner-background`      | The background of the banner                          | #000000 |
+| `--abra-banner-border-radius`   | The border radius of the banner                       | 0       |
+| `--abra-banner-color`           | The color of the text in the banner                   | #FFFFFF |
+| `--abra-banner-font-size`       | The font size of the text in the banner               | 14px    |
+| `--abra-banner-gap`             | The space between the icon and the text in the banner | 1rem    |
+| `--abra-banner-icon-color`      | The color of the icon in the banner                   | #FFFFFF |
+| `--abra-banner-icon-size`       | The size of the icon in the banner                    | 32px    |
+| `--abra-banner-justify-content` | The alignment of the text in the banner               | center  |
+| `--abra-banner-margin-x`        | The horizontal space around the banner                | 1rem    |
+| `--abra-banner-margin-y`        | The vertical space around the banner                  | 1rem    |
+| `--abra-banner-padding-x`       | The horizontal padding inside of the banner           | 1rem    |
+| `--abra-banner-padding-y`       | The vertical padding inside of the banner             | 1rem    |
 
 For example, you can change the colors and the spacing to match your online store.
 
@@ -318,23 +325,19 @@ For example, you can change the colors and the spacing to match your online stor
 
 ### CSS classes
 
-| Name                       | Description                                                        |
-| -------------------------- | ------------------------------------------------------------------ |
-| `.abra-banner-block`       | The element wrapping the banner                                    |
-| `.abra-banner`             | The root element                                                   |
-| `.abra-banner--show`       | A modifier class applied to the root element to show the banner    |
-| `.abra-banner--{{ name }}` | A modifier class applied to the root element for a specific banner |
-| `.abra-banner__heading`    | The element used for heading content                               |
-| `.abra-banner__link`       | The link element                                                   |
-| `.abra-banner__text`       | The element used for content                                       |
+| Name                    | Description                                                     |
+| ----------------------- | --------------------------------------------------------------- |
+| `.abra-banner-block`    | The element wrapping the banner                                 |
+| `.abra-banner`          | The root element                                                |
+| `.abra-banner--show`    | A modifier class applied to the root element to show the banner |
+| `.abra-banner__content` | The element wrapping the text, and icon if present              |
+| `.abra-banner__icon`    | The element wrapping the SVG for the icon                       |
+| `.abra-banner__link`    | The link element                                                |
+| `.abra-banner__text`    | The element used for content                                    |
 
 For example, you can change the text element entirely.
 
 ```css
-.abra-banner--banner-1 {
-  background-color: purple;
-}
-
 .abra-banner__link {
   text-decoration: none;
 }
@@ -351,14 +354,14 @@ For example, you can change the text element entirely.
 
 You call this function to programatically show a banner, where the first parameter is the identifier from the app block settings.
 
-For example, you can show a banner with the name of `banner-1`.
+For example, you can show a banner.
 
 ```javascript
-window.Abra.Banner.show('banner-1');
+window.Abra.Banner.show('default');
 
 // or
 
-window.Abra.Banner.show('banner-1', {
+window.Abra.Banner.show('default', {
   text: 'Get a free sample',
 });
 ```
@@ -367,10 +370,10 @@ window.Abra.Banner.show('banner-1', {
 
 You call this function to programatically hide a banner, where the first parameter is the identifier from the app block settings.
 
-For example, you can hide a banner with the name of `banner-1`.
+For example, you can hide a banner with the name of `default`.
 
 ```javascript
-window.Abra.Banner.hide('banner-1');
+window.Abra.Banner.hide('default');
 ```
 
 ### JavaScript events
@@ -379,14 +382,14 @@ window.Abra.Banner.hide('banner-1');
 
 This event is dispatched after the banner is shown from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
-For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
+For example, you can listen to this event and run additional logic for a banner with an id of `default`.
 
 ```javascript
 const removeListener = window.Abra.Banner.addListener(
-  'banner-1',
+  'default',
   'shown',
   event => {
-    console.log('banner-1 is visible');
+    console.log('default is visible');
   },
 );
 
@@ -398,14 +401,14 @@ removeListener();
 
 This event is dispatched after the banner is hidden from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
-For example, you can listen to this event and run additional logic for a banner with an id of `banner-1`.
+For example, you can listen to this event and run additional logic for a banner with an id of `default`.
 
 ```javascript
 const removeListener = window.Abra.Banner.addListener(
-  'banner-1',
+  'default',
   'hidden',
   event => {
-    console.log('banner-1 is hidden');
+    console.log('default is hidden');
   },
 );
 
@@ -426,6 +429,8 @@ The popup is an app embed you can enable for your store.
 | `--abra-popup-color`           | The color of the text in the popup              | #FFFFFF |
 | `--abra-popup-font-size`       | The font size of the text in the popup          | 14px    |
 | `--abra-popup-gap`             | The space between the text and the close button | 1rem    |
+| `--abra-popup-icon-color`      | The color of the icon in the popup              | #FFFFFF |
+| `--abra-popup-icon-size`       | The size of the icon in the popup               | 32px    |
 | `--abra-popup-margin-x`        | The horizontal space around the popup           | 1rem    |
 | `--abra-popup-margin-y`        | The vertical space around the popup             | 1rem    |
 | `--abra-popup-padding-x`       | The horizontal padding inside of the popup      | 1rem    |
@@ -446,16 +451,19 @@ For example, you can change the colors and the spacing to match your online stor
 
 ### CSS classes
 
-| Name                        | Description                                                    |
-| --------------------------- | -------------------------------------------------------------- |
-| `.abra-popup-block`         | The element wrapping the popup                                 |
-| `.abra-popup`               | The root element                                               |
-| `.abra-popup--bottom-left`  | A modifier class applied to the root element for placement     |
-| `.abra-popup--bottom-right` | A modifier class applied to the root element for placement     |
-| `.abra-popup--show`         | A modifier class applied to the root element to show the popup |
-| `.abra-popup__close`        | The element wrapping the close button                          |
-| `.abra-popup__close-button` | The close button element                                       |
-| `.abra-popup__text`         | The element used for content                                   |
+| Name                         | Description                                                    |
+| ---------------------------- | -------------------------------------------------------------- |
+| `.abra-popup-block`          | The element wrapping the popup                                 |
+| `.abra-popup`                | The root element                                               |
+| `.abra-popup--bottom-center` | A modifier class applied to the root element for placement     |
+| `.abra-popup--bottom-left`   | A modifier class applied to the root element for placement     |
+| `.abra-popup--bottom-right`  | A modifier class applied to the root element for placement     |
+| `.abra-popup--show`          | A modifier class applied to the root element to show the popup |
+| `.abra-popup__close`         | The element wrapping the close button                          |
+| `.abra-popup__close-button`  | The close button element                                       |
+| `.abra-popup__content`       | The element wrapping the text, and icon if present             |
+| `.abra-popup__icon`          | The element wrapping the SVG for the icon                      |
+| `.abra-popup__text`          | The element used for content                                   |
 
 For example, you can change the text element entirely.
 
