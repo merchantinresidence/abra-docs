@@ -109,6 +109,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 | `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `selector`   | The DOM selector for the element                                                                 |
+| `value`      | The class to add to the element                                                                  |
 
 #### `remove-class`
 
@@ -129,6 +130,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 | `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `selector`   | The DOM selector for the element                                                                 |
+| `value`      | The class to remove from the element                                                             |
 
 #### `hide`
 
