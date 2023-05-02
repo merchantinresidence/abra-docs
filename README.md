@@ -30,8 +30,10 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "announcement-bar"
+    "example": {
+      "type": "announcement-bar",
+      "icon": "gift",
+      "text": "FREE GIFT ON ORDERS OVER $50"
     }
   }
 }
@@ -51,8 +53,10 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "banner"
+    "example": {
+      "type": "banner",
+      "icon": "gift",
+      "text": "FREE GIFT ON ORDERS OVER $50"
     }
   }
 }
@@ -72,8 +76,10 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "popup"
+    "example": {
+      "type": "popup",
+      "icon": "percentage",
+      "text": "20% OFF APPLIED"
     }
   }
 }
@@ -95,8 +101,10 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "add-class"
+    "example": {
+      "type": "add-class",
+      "selector": ".footer",
+      "value": "footer--promo"
     }
   }
 }
@@ -116,8 +124,10 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "remove-class"
+    "example": {
+      "type": "remove-class",
+      "selector": ".footer",
+      "value": "footer--primary-bg"
     }
   }
 }
@@ -138,7 +148,8 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 {
   "schema": {
     "example-popup": {
-      "type": "hide"
+      "type": "hide",
+      "selector": ".footer"
     }
   }
 }
@@ -158,7 +169,9 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 {
   "schema": {
     "example-popup": {
-      "type": "price"
+      "type": "price",
+      "selector": ".price",
+      "html": "<div class=\"price\"><div class=\"price--sale\">{{sale_price}}</div><div class=\"price--regular\">{{regular_price}}</div></div>"
     }
   }
 }
