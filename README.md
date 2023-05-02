@@ -2,6 +2,175 @@
 
 Welcome to Abra's developer docs! We know that your business needs as a merchant are diverse and we want Abra to work for you, not against you.
 
+## Schema
+
+One of the first touchpoints of customization is the schema under the "Settings" section in the app.
+
+The schema has the following shape:
+
+```typescript
+interface ISchema {
+  [template: string]: {
+    [id: string]: IBlock;
+  };
+}
+```
+
+| Name       | Description                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| `template` | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart          |
+| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does. |
+
+The `IBlock` type is a union of different rules and blocks you can pass into the schema. Below are all the different blocks and rules you can use.
+
+### Blocks
+
+#### `announcement-bar`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "announcement-bar"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | announcement-bar                                                                                 |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`       | gift \| discount \| percentage \| undefined                                                      |
+| `text`       | The text for the announcement bar                                                                |
+
+#### `banner`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "banner"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | banner                                                                                           |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`       | gift \| discount \| percentage \| undefined                                                      |
+| `text`       | The text for the banner                                                                          |
+
+#### `popup`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "popup"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | popup                                                                                            |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`       | gift \| discount \| percentage \| undefined                                                      |
+| `text`       | The text for the popup                                                                           |
+
+### Rules
+
+#### `add-class`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "add-class"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | add-class                                                                                        |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector`   | The DOM selector for the element                                                                 |
+
+#### `remove-class`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "remove-class"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | remove-class                                                                                     |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector`   | The DOM selector for the element                                                                 |
+
+#### `hide`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "hide"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| `type`       | hide                                                                                             |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector`   | The DOM selector for the element                                                                 |
+
+#### `price`
+
+```json
+{
+  "schema": {
+    "example-popup": {
+      "type": "price"
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                              |
+| ------------ | -------------------------------------------------------------------------------------------------------- |
+| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.            |
+| `type`       | price                                                                                                    |
+| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart                     |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`.         |
+| `html`       | Custom markup for the price element. You can use `{{regular_price}}` and `{{sale_price}}` in the markup. |
+| `selector`   | The DOM selector for the element                                                                         |
+
 ## Global
 
 These are global CSS and JavaScript integration points for you to use in your theme.
