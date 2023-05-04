@@ -8,20 +8,24 @@ One of the first touchpoints of customization is the schema under the "Settings"
 
 The schema has the following shape:
 
-```typescript
-interface ISchema {
-  [template: string]: {
-    [id: string]: IBlock;
-  };
+```json
+{
+  "schema": {
+    "TEMPLATE": {
+      "ID": {
+        "type": ""
+      }
+    }
+  }
 }
 ```
 
-| Name       | Description                                                                                   |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| `template` | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart          |
-| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does. |
+You can pass in any number of blocks to given templates using this schema. The template and id are defined as:
 
-The `IBlock` type is a union of different rules and blocks you can pass into the schema. Below are all the different blocks and rules you can use.
+| Name       | Description                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| `template` | all \| \| home \| product \| product.alternative \| collection \| collection.alternative \| cart |
+| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 
 ### Blocks
 
@@ -30,10 +34,12 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example": {
-      "type": "announcement-bar",
-      "icon": "gift",
-      "text": "FREE GIFT ON ORDERS OVER $50"
+    "all": {
+      "gift-announcement-bar": {
+        "type": "announcement-bar",
+        "icon": "gift",
+        "text": "FREE GIFT ON ORDERS OVER $50"
+      }
     }
   }
 }
@@ -41,9 +47,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | announcement-bar                                                                                 |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `icon`       | gift \| discount \| percentage \| undefined                                                      |
 | `text`       | The text for the announcement bar                                                                |
@@ -53,10 +57,12 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example": {
-      "type": "banner",
-      "icon": "gift",
-      "text": "FREE GIFT ON ORDERS OVER $50"
+    "all": {
+      "gift-banner": {
+        "type": "banner",
+        "icon": "gift",
+        "text": "FREE GIFT ON ORDERS OVER $50"
+      }
     }
   }
 }
@@ -64,9 +70,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | banner                                                                                           |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `icon`       | gift \| discount \| percentage \| undefined                                                      |
 | `text`       | The text for the banner                                                                          |
@@ -76,10 +80,12 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example": {
-      "type": "popup",
-      "icon": "percentage",
-      "text": "20% OFF APPLIED"
+    "all": {
+      "popup-applied": {
+        "type": "popup",
+        "icon": "percentage",
+        "text": "20% OFF APPLIED"
+      }
     }
   }
 }
@@ -87,9 +93,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | popup                                                                                            |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `icon`       | gift \| discount \| percentage \| undefined                                                      |
 | `text`       | The text for the popup                                                                           |
@@ -101,10 +105,12 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example": {
-      "type": "add-class",
-      "selector": ".footer",
-      "value": "footer--promo"
+    "all": {
+      "update-footer": {
+        "type": "add-class",
+        "selector": ".footer",
+        "value": "footer--promo"
+      }
     }
   }
 }
@@ -112,22 +118,55 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | add-class                                                                                        |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `selector`   | The DOM selector for the element                                                                 |
 | `value`      | The class to add to the element                                                                  |
+
+#### `cart`
+
+```json
+{
+  "schema": {
+    "cart": {
+      "promo-cart": {
+        "type": "cart",
+        "discounts": {
+          "selector": ".totals",
+          "html": "<div><ul class=\"discounts list-unstyled\" role=\"list\" aria-label=\"Discount\"><li class=\"discounts__discount discounts__discount--position\">{{code}} (-{{total_discount}})</li></ul></div>"
+        },
+        "items": {
+          "selector": "tr.cart-item"
+        },
+        "subtotal": {
+          "selector": ".totals__subtotal-value"
+        }
+      }
+    }
+  }
+}
+```
+
+| Name         | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| `type`       | cart                                                                                             |
+| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `discounts`  | The `selector` and `html` for the cart discounts                                                 |
+| `items`      | The `selector` and `html` for the cart items                                                     |
+| `subtotal`   | The `selector` and `html` for the cart subtotal                                                  |
+| `total`      | The `selector` and `html` for the cart total                                                     |
 
 #### `remove-class`
 
 ```json
 {
   "schema": {
-    "example": {
-      "type": "remove-class",
-      "selector": ".footer",
-      "value": "footer--primary-bg"
+    "all": {
+      "update-footer": {
+        "type": "remove-class",
+        "selector": ".footer",
+        "value": "footer--primary-bg"
+      }
     }
   }
 }
@@ -135,9 +174,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | remove-class                                                                                     |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `selector`   | The DOM selector for the element                                                                 |
 | `value`      | The class to remove from the element                                                             |
@@ -147,9 +184,11 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "hide",
-      "selector": ".footer"
+    "all": {
+      "hide-footer": {
+        "type": "hide",
+        "selector": ".footer"
+      }
     }
   }
 }
@@ -157,9 +196,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------ |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
 | `type`       | hide                                                                                             |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart             |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
 | `selector`   | The DOM selector for the element                                                                 |
 
@@ -168,10 +205,12 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 ```json
 {
   "schema": {
-    "example-popup": {
-      "type": "price",
-      "selector": ".price",
-      "html": "<div class=\"price\"><div class=\"price--sale\">{{sale_price}}</div><div class=\"price--regular\">{{regular_price}}</div></div>"
+    "all": {
+      "dynamic-price": {
+        "type": "price",
+        "selector": ".price",
+        "html": "<div class=\"price\"><div class=\"price--sale\">{{sale_price}}</div><div class=\"price--regular\">{{regular_price}}</div></div>"
+      }
     }
   }
 }
@@ -179,9 +218,7 @@ The `IBlock` type is a union of different rules and blocks you can pass into the
 
 | Name         | Description                                                                                              |
 | ------------ | -------------------------------------------------------------------------------------------------------- |
-| `id`         | The identifier for the rule. This can be anything that helps you identify what the rule does.            |
 | `type`       | price                                                                                                    |
-| `template`   | all \| \| home \| product \| product._ALT_ \| collection \| collection._ALT_ \| cart                     |
 | `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`.         |
 | `html`       | Custom markup for the price element. You can use `{{regular_price}}` and `{{sale_price}}` in the markup. |
 | `selector`   | The DOM selector for the element                                                                         |
