@@ -22,10 +22,10 @@ The schema has the following shape:
 
 You can pass in any number of blocks to given templates using this schema. The template and id are defined as:
 
-| Name       | Description                                                                                      |
-| ---------- | ------------------------------------------------------------------------------------------------ |
-| `template` | all \| \| home \| product \| product.alternative \| collection \| collection.alternative \| cart |
-| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does.    |
+| Name       | Description                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| `template` | all \| home \| product \| product.alternative \| collection \| collection.alternative \| cart |
+| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does. |
 
 ### Blocks
 
