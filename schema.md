@@ -60,7 +60,7 @@ The next core concept is blocks. There are 3 categories of blocks we'll be worki
 
 ### Product object block
 
-The `product` block gives you access to the product within the promotion. It'll only apply when the product is eligible for an offer with the active promotion.
+The `product` block gives you access to the product within the promotion. It'll only apply when the product is eligible for an offer within the active promotion.
 
 _An example of a product block to add slashed pricing on all pages_
 
@@ -104,9 +104,94 @@ You can use these variables within the `html` property to render promotion speci
 | `{{ total_discount }}`   | The formatted price discounted from the product with the promotion | $2.00                    |
 | `{{ url }}`              | The product url                                                    | /products/bicycle-helmet |
 
-### `cart` object block
+### Cart object block
 
-### `cart-item` object block
+The `cart` block gives you access to the cart within the promotion. It'll only apply when a cart item within the cart is eligible for an offer within the active promotion.
+
+_An example of a cart block to add the total discount to the cart drawer on all pages_
+
+```json
+{
+  "schema": {
+    "all": {
+      "cart-drawer-subtotal": {
+        "type": "cart",
+        "selector": "#CartDrawer .cart-drawer__footer .totals__subtotal-value",
+        "html": "<p class=\"totals__subtotal-value\">{{ subtotal_price }} (-{{ total_discount }})</p>"
+      }
+    }
+  }
+}
+```
+
+#### Block properties
+
+You can use these properties to customize the `cart` block.
+
+| Name       | Description                                                          |
+| ---------- | -------------------------------------------------------------------- |
+| `type`     | cart                                                                 |
+| `selector` | The DOM selector for the element                                     |
+| `html`     | The HTML markup after the promotion is activated.                    |
+| `onEvent`  | The JavaScript event name. The event must be dispatched on `window`. |
+
+#### HTML variables
+
+You can use these variables within the `html` property to render promotion specific content.
+
+| Name                   | Description                                            | Example   |
+| ---------------------- | ------------------------------------------------------ | --------- |
+| `{{ code }}`           | The promotion code                                     | WELCOME10 |
+| `{{ subtotal_price }}` | The formatted subtotal price of the cart               | $20.00    |
+| `{{ total_discount }}` | The formatted price of all discounts for the promotion | $2.00     |
+
+### Cart item object block
+
+The `cart-item` block gives you access to the cart items within the promotion. It'll only apply when the cart item is eligible for an offer within the active promotion.
+
+_An example of a cart item block to slashed pricing on the cart page_
+
+```json
+{
+  "schema": {
+    "cart": {
+      "cart-item-pricing": {
+        "type": "cart-item",
+        "item": "#cart .cart-item",
+        "selector": "div.product-option",
+        "html": "<div class=\"product-option\">{{ final_price }} <div class=\"cart-item--regular-price\">{{ original_price }}</div></div>"
+      }
+    }
+  }
+}
+```
+
+#### Block properties
+
+You can use these properties to customize the `cart` block.
+
+| Name       | Description                                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------ |
+| `type`     | cart-item                                                                                                    |
+| `item`     | The DOM selector for the cart items. This selector must select **exactly** the same number of items in cart. |
+| `selector` | The DOM selector for the element                                                                             |
+| `html`     | The HTML markup after the promotion is activated.                                                            |
+| `onEvent`  | The JavaScript event name. The event must be dispatched on `window`.                                         |
+
+#### HTML variables
+
+You can use these variables within the `html` property to render promotion specific content.
+
+| Name                        | Description                                                          | Example        |
+| --------------------------- | -------------------------------------------------------------------- | -------------- |
+| `{{ code }}`                | The promotion code                                                   | WELCOME10      |
+| `{{ final_line_price }}`    | The formatted line price after the promotion is applied              | $36.00         |
+| `{{ final_price }}`         | The formatted price after the promotion is applied                   | $18.00         |
+| `{{ handle }}`              | The product handle                                                   | bicycle-helmet |
+| `{{ original_line_price }}` | The formatted line price before the promotion is applied             | $40.00         |
+| `{{ original_price }}`      | The formatted price before the promotion is applied                  | $20.00         |
+| `{{ quantity }}`            | The cart item quantity                                               | 2              |
+| `{{ total_discount }}`      | The formatted price discounted from the cart item with the promotion | $4.00          |
 
 ### Element block
 
