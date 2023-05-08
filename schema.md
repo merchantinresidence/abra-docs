@@ -33,7 +33,12 @@ The Abra schema is a core concept to running your promotions. If you've created 
       "price": {
         "type": "product",
         "selector": ".price",
-        "html": "<div class=\"price\">{{ final_price }} <s>{{ original_price }}</s></div>"
+        "html": "<div class=\"price\">{{ original_price }}</div>"
+      },
+      "compare-at-price": {
+        "type": "product",
+        "selector": ".compare-price",
+        "html": "<div class=\"compare-price\">{{ final_price }}</div>"
       }
     },
     "cart": {
