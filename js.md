@@ -6,7 +6,7 @@ Abra provides a JavaScript SDK with many helpers, events and dispatchers for the
 
 ## Promotion
 
-### JavaScript actions
+### Methods
 
 #### `activate`
 
@@ -24,7 +24,7 @@ You can call this function to programatically deactivate a promotion.
 window.Abra.deactivate('YOUR_CODE');
 ```
 
-### JavaScript events
+### Events
 
 #### `initialized`
 
@@ -68,7 +68,7 @@ removeListener();
 
 ### Announcement bar
 
-#### JavaScript actions
+#### Methods
 
 ##### `show`
 
@@ -110,7 +110,7 @@ window.Abra.AnnouncementBar.render({
 });
 ```
 
-#### JavaScript events
+#### Events
 
 ##### `shown`
 
@@ -146,7 +146,7 @@ removeListener();
 
 ### Banner
 
-#### JavaScript actions
+#### Methods
 
 ##### `show`
 
@@ -170,7 +170,7 @@ You call this function to programatically hide a banner, where the first paramet
 window.Abra.Banner.hide('default');
 ```
 
-#### JavaScript events
+#### Events
 
 ##### `shown`
 
@@ -208,7 +208,7 @@ removeListener();
 
 ### Popup
 
-#### JavaScript actions
+#### Methods
 
 ##### `show`
 
@@ -232,7 +232,7 @@ You call this function to programatically hide the popup.
 window.Abra.Popup.hide();
 ```
 
-#### JavaScript events
+#### Events
 
 ##### `shown`
 
