@@ -17,7 +17,7 @@ To change your schema, go to the "Settings" page and then select "Edit JSON". Yo
 
 > At any point, you can revert to the latest default for your theme by clicking "Revert to default".
 
-Here's the outline of the schema:
+The schema uses the outline shown below. You can replace the capitalized placeholders with the values found in the table under the example.
 
 ```json
 {
@@ -32,8 +32,6 @@ Here's the outline of the schema:
 }
 ```
 
-You'd replace the all caps placeholder with the following values:
-
 | Name             | Description                                                                                     |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | `TEMPLATE`       | all \| index \| product \| product.alternative \| collection \| collection.alternative \| cart  |
@@ -42,7 +40,9 @@ You'd replace the all caps placeholder with the following values:
 | `PROPERTY_NAME`  | The name of the property you're customizing within the block                                    |
 | `PROPERTY_VALUE` | The value of the property you're customizing within the block                                   |
 
-Here's an example of an Abra promotion using a popup block in the schema:
+### Example
+
+For example, a promotion using a popup block in the schema:
 
 ```json
 {
@@ -59,7 +59,7 @@ Here's an example of an Abra promotion using a popup block in the schema:
 
 ## Blocks
 
-Blocks are the pieces nested within the schema. There are 3 types of blocks:
+Blocks are the pieces nested within the template in your schema. There are 3 types of blocks:
 
 1. **Object block** - dynamically access an object and update some HTML
 2. **Element block** - render elements and customize block content from your promotion
@@ -69,11 +69,9 @@ Blocks are the pieces nested within the schema. There are 3 types of blocks:
 
 > Only applies when the product is eligible for the active promotion.
 
-The `product` block gives you access to the product context.
+The `product` block allows you to replace a block of HTML with new HTML. You have access to the product context in the new HTML.
 
 #### Block properties
-
-You can use these properties to customize the `product` block.
 
 | Name       | Description                                                          |
 | ---------- | -------------------------------------------------------------------- |
@@ -83,8 +81,6 @@ You can use these properties to customize the `product` block.
 | `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
 
 #### HTML variables
-
-You can use these variables within the `html` property to render promotion-specific content.
 
 | Name                     | Description                                                                      | Example                  |
 | ------------------------ | -------------------------------------------------------------------------------- | ------------------------ |

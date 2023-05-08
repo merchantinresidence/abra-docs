@@ -8,7 +8,7 @@ Explore our guides and examples to integrate Abra with your online store.
 
 Abra uses a JSON schema to configure the integration points with your theme. You can change your schema to improve how Abra works with your theme and create richer online store experiences for buyers.
 
-[Get started 👉](schema.md)
+[Get started 👉](schema.md 'Schema | Abra Developer Docs')
 
 ## CSS Styling
 
@@ -16,7 +16,7 @@ Abra uses a JSON schema to configure the integration points with your theme. You
 
 Abra has many CSS variables and CSS classes you can override to style your online store when a promotion is active.
 
-[Get started 👉](css.md)
+[Get started 👉](css.md 'Styling | Abra Developer Docs')
 
 ## JavaScript SDK
 
@@ -24,4 +24,4 @@ Abra has many CSS variables and CSS classes you can override to style your onlin
 
 Abra provides a JavaScript SDK with many helpers, events and dispatchers for the different parts of your promotions. You can programatically control these blocks and make custom experiences on your online store.
 
-[Get started 👉](js.md)
+[Get started 👉](js.md 'JS SDK | Abra Developer Docs')
