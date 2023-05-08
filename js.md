@@ -64,13 +64,11 @@ const removeListener = window.Abra.addListener('deactivated', event => {
 removeListener();
 ```
 
-## Blocks
+## Announcement bar block
 
-### Announcement bar
+### Methods
 
-#### Methods
-
-##### `show`
+#### `show`
 
 You call this function to programatically show the announcement bar.
 
@@ -84,7 +82,7 @@ window.Abra.AnnouncementBar.show({
 });
 ```
 
-##### `hide`
+#### `hide`
 
 You call this function to programatically hide the announcement bar.
 
@@ -92,7 +90,7 @@ You call this function to programatically hide the announcement bar.
 window.Abra.AnnouncementBar.hide();
 ```
 
-##### `render`
+#### `render`
 
 You call this function to programatically render the announcement bar with new options.
 
@@ -110,9 +108,9 @@ window.Abra.AnnouncementBar.render({
 });
 ```
 
-#### Events
+### Events
 
-##### `shown`
+#### `shown`
 
 This event is dispatched after the announcement bar is shown from a promotion being applied.
 
@@ -128,7 +126,7 @@ const removeListener = window.Abra.AnnouncementBar.addListener(
 removeListener();
 ```
 
-##### `hidden`
+#### `hidden`
 
 This event is dispatched after the announcement bar is hidden from a promotion being applied.
 
@@ -144,11 +142,11 @@ const removeListener = window.Abra.AnnouncementBar.addListener(
 removeListener();
 ```
 
-### Banner
+## Banner block
 
-#### Methods
+### Methods
 
-##### `show`
+#### `show`
 
 You call this function to programatically show a banner, where the first parameter is the identifier from the app block settings.
 
@@ -162,7 +160,7 @@ window.Abra.Banner.show('default', {
 });
 ```
 
-##### `hide`
+#### `hide`
 
 You call this function to programatically hide a banner, where the first parameter is the identifier from the app block settings.
 
@@ -170,9 +168,9 @@ You call this function to programatically hide a banner, where the first paramet
 window.Abra.Banner.hide('default');
 ```
 
-#### Events
+### Events
 
-##### `shown`
+#### `shown`
 
 This event is dispatched after the banner is shown from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
@@ -189,7 +187,7 @@ const removeListener = window.Abra.Banner.addListener(
 removeListener();
 ```
 
-##### `hidden`
+#### `hidden`
 
 This event is dispatched after the banner is hidden from a promotion being applied, where the first parameter is the identifier from the app block settings.
 
@@ -206,11 +204,11 @@ const removeListener = window.Abra.Banner.addListener(
 removeListener();
 ```
 
-### Popup
+## Popup block
 
-#### Methods
+### Methods
 
-##### `show`
+#### `show`
 
 You call this function to programatically show the popup.
 
@@ -224,7 +222,7 @@ window.Abra.Popup.show({
 });
 ```
 
-##### `hide`
+#### `hide`
 
 You call this function to programatically hide the popup.
 
@@ -232,9 +230,9 @@ You call this function to programatically hide the popup.
 window.Abra.Popup.hide();
 ```
 
-#### Events
+### Events
 
-##### `shown`
+#### `shown`
 
 This event is dispatched after the popup is visible from a promotion being applied.
 
@@ -247,7 +245,7 @@ const removeListener = window.Abra.Popup.addListener('shown', event => {
 removeListener();
 ```
 
-##### `hidden`
+#### `hidden`
 
 This event is dispatched after the popup is hidden from a promotion being applied.
 
