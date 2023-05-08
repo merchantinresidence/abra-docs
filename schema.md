@@ -96,7 +96,7 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 Change your `.price` element to include a slashed original price and the final price
 
-```liquid
+```json
 {
   "schema": {
     "all": {
@@ -201,9 +201,189 @@ Change your cart item to show the final price and slash the original price
 
 ### Element block
 
+#### Announcemenet bar element block
+
+The `announcement-bar` block allows you show and update the content of the your announcement bar.
+
+#### Block properties
+
+| Name      | Description                                                          |
+| --------- | -------------------------------------------------------------------- |
+| `type`    | announcement-bar                                                     |
+| `icon`    | discount \| gift \| percentage                                       |
+| `text`    | The announcement bar's text content                                  |
+| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+
+#### Example
+
+Showing an announcement bar with a gift icon and some text
+
+```json
+{
+  "schema": {
+    "all": {
+      "gift-announcement-bar": {
+        "type": "announcement-bar",
+        "icon": "gift",
+        "text": "FREE GIFT ON ORDERS OVER $50"
+      }
+    }
+  }
+}
+```
+
+#### Banner element block
+
+The `banner` block allows you show and update the content of the your banner.
+
+#### Block properties
+
+| Name      | Description                                                          |
+| --------- | -------------------------------------------------------------------- |
+| `type`    | banner                                                               |
+| `icon`    | discount \| gift \| percentage                                       |
+| `text`    | The banner's text content                                            |
+| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+
+#### Example
+
+Showing an banner with a discount icon and some text
+
+```json
+{
+  "schema": {
+    "all": {
+      "gift-banner": {
+        "type": "banner",
+        "icon": "discount",
+        "text": "FREE GIFT ON ORDERS OVER $50"
+      }
+    }
+  }
+}
+```
+
+#### Popup element block
+
+The `popup` block allows you show and update the content of the your popup.
+
+#### Block properties
+
+| Name      | Description                                                          |
+| --------- | -------------------------------------------------------------------- |
+| `type`    | popup                                                                |
+| `icon`    | discount \| gift \| percentage                                       |
+| `text`    | The popup's text content                                             |
+| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+
+#### Example
+
+Showing an popup with some text
+
+```json
+{
+  "schema": {
+    "all": {
+      "custom-popup": {
+        "type": "popup",
+        "text": "20% OFF APPLIED"
+      }
+    }
+  }
+}
+```
+
 ### Method block
 
-## Examples
+#### Hide method block
+
+The `hide` block allows you to hide an element when the promotion is active.
+
+#### Block properties
+
+| Name       | Description                             |
+| ---------- | --------------------------------------- |
+| `type`     | hide                                    |
+| `selector` | The DOM selector for the target element |
+
+#### Example
+
+Hiding your footer
+
+```json
+{
+  "schema": {
+    "all": {
+      "hide-footer": {
+        "type": "hide",
+        "selector": ".footer"
+      }
+    }
+  }
+}
+```
+
+#### Add class method block
+
+The `add-class` block allows you to add a class to an element when the promotion is active.
+
+#### Block properties
+
+| Name       | Description                             |
+| ---------- | --------------------------------------- |
+| `type`     | add-class                               |
+| `selector` | The DOM selector for the target element |
+| `value`    | The CSS class - do not include a `.`    |
+
+#### Example
+
+Adding a `vip-customer` class to the body element
+
+```json
+{
+  "schema": {
+    "all": {
+      "vip-customer-style": {
+        "type": "add-class",
+        "selector": "body",
+        "value": "vip-customer"
+      }
+    }
+  }
+}
+```
+
+#### Remove class method block
+
+The `remove-class` block allows you to remove a class to an element when the promotion is active.
+
+#### Block properties
+
+| Name       | Description                             |
+| ---------- | --------------------------------------- |
+| `type`     | remove-class                            |
+| `selector` | The DOM selector for the target element |
+| `value`    | The CSS class - do not include a `.`    |
+
+#### Example
+
+Removing a `hidden` class from a navigation item
+
+```json
+{
+  "schema": {
+    "all": {
+      "show-special-nav-item": {
+        "type": "remove-class",
+        "selector": ".nav .nav-item--vip",
+        "value": "hidden"
+      }
+    }
+  }
+}
+```
+
+## Theme examples
 
 ### Dawn
 
@@ -248,8 +428,4 @@ Change your cart item to show the final price and slash the original price
     }
   }
 }
-```
-
-```
-
 ```
