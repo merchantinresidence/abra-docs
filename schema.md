@@ -78,7 +78,9 @@ _An example of a product block to add slashed pricing on all pages_
 }
 ```
 
-#### Block
+#### Block properties
+
+The properties for the `product` block:
 
 | Name       | Description                                                          |
 | ---------- | -------------------------------------------------------------------- |
@@ -89,16 +91,18 @@ _An example of a product block to add slashed pricing on all pages_
 
 #### HTML variables
 
-| Name               | Description                                                        | Example                  |
-| ------------------ | ------------------------------------------------------------------ | ------------------------ |
-| `code`             | The promotion code                                                 | WELCOME10                |
-| `compare_at_price` | The formatted compare at price of the product                      | $30.00                   |
-| `final_price`      | The formatted price of the product after the promotion is applied  | $18.00                   |
-| `handle`           | The product handle                                                 | bicycle-helmet           |
-| `original_price`   | The formatted price of the product before the promotion is applied | $20.00                   |
-| `title`            | The product title                                                  | Bicycle helmet           |
-| `total_discount`   | The formatted price discounted from the product with the promotion | $2.00                    |
-| `url`              | The product url                                                    | /products/bicycle-helmet |
+The HTML variables available within the `html` property.
+
+| Name                     | Description                                                        | Example                  |
+| ------------------------ | ------------------------------------------------------------------ | ------------------------ |
+| `{{ code }}`             | The promotion code                                                 | WELCOME10                |
+| `{{ compare_at_price }}` | The formatted compare at price of the product                      | $30.00                   |
+| `{{ final_price }}`      | The formatted price of the product after the promotion is applied  | $18.00                   |
+| `{{ handle }}`           | The product handle                                                 | bicycle-helmet           |
+| `{{ original_price }}`   | The formatted price of the product before the promotion is applied | $20.00                   |
+| `{{ title }}`            | The product title                                                  | Bicycle helmet           |
+| `{{ total_discount }}`   | The formatted price discounted from the product with the promotion | $2.00                    |
+| `{{ url }}`              | The product url                                                    | /products/bicycle-helmet |
 
 ### `cart` object block
 
