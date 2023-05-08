@@ -34,11 +34,9 @@ Change your background to hearts and your button color to red for a Valentine's 
 }
 ```
 
-## Block styling
+## Announcement bar styling
 
-### Announcement bar
-
-#### CSS classes
+### CSS classes
 
 | Name                              | Description                                                               |
 | --------------------------------- | ------------------------------------------------------------------------- |
@@ -51,7 +49,7 @@ Change your background to hearts and your button color to red for a Valentine's 
 | `.abra-announcement-bar__text`    | The element used for content                                              |
 | `.abra-announcement-bar--show`    | A modifier class applied to the root element to show the announcement bar |
 
-#### CSS variables
+### CSS variables
 
 | Name                                      | Description                                                                      | Value      |
 | ----------------------------------------- | -------------------------------------------------------------------------------- | ---------- |
@@ -68,7 +66,7 @@ Change your background to hearts and your button color to red for a Valentine's 
 | `--abra-announcement-bar-padding-y`       | The vertical padding inside of the announcement bar                              | 1rem       |
 | `--abra-announcement-bar-z-index`         | The z-index of the announcement bar                                              | 4          |
 
-#### Example
+### Example
 
 Change the announcement bar colors and customize the text styling
 
@@ -87,9 +85,9 @@ Change the announcement bar colors and customize the text styling
 }
 ```
 
-### Banner
+## Banner styling
 
-#### CSS classes
+### CSS classes
 
 | Name                    | Description                                                     |
 | ----------------------- | --------------------------------------------------------------- |
@@ -101,7 +99,7 @@ Change the announcement bar colors and customize the text styling
 | `.abra-banner__link`    | The link element                                                |
 | `.abra-banner__text`    | The element used for content                                    |
 
-#### CSS variables
+### CSS variables
 
 | Name                            | Description                                           | Value   |
 | ------------------------------- | ----------------------------------------------------- | ------- |
@@ -118,7 +116,7 @@ Change the announcement bar colors and customize the text styling
 | `--abra-banner-padding-x`       | The horizontal padding inside of the banner           | 1rem    |
 | `--abra-banner-padding-y`       | The vertical padding inside of the banner             | 1rem    |
 
-#### Example
+### Example
 
 Change the colors and the spacing to match your online store and update text styling
 
@@ -136,9 +134,9 @@ Change the colors and the spacing to match your online store and update text sty
 }
 ```
 
-### Popup
+## Popup styling
 
-#### CSS classes
+### CSS classes
 
 | Name                         | Description                                                    |
 | ---------------------------- | -------------------------------------------------------------- |
@@ -154,7 +152,7 @@ Change the colors and the spacing to match your online store and update text sty
 | `.abra-popup__icon`          | The element wrapping the SVG for the icon                      |
 | `.abra-popup__text`          | The element used for content                                   |
 
-#### CSS variables
+### CSS variables
 
 | Name                           | Description                                     | Value   |
 | ------------------------------ | ----------------------------------------------- | ------- |
@@ -171,7 +169,7 @@ Change the colors and the spacing to match your online store and update text sty
 | `--abra-popup-padding-y`       | The vertical padding inside of the popup        | 1rem    |
 | `--abra-popup-z-index`         | The z-index of the popup                        | 4       |
 
-#### Example
+### Example
 
 Change the colors and the spacing to match your online store and update text styling
 
@@ -190,9 +188,9 @@ Change the colors and the spacing to match your online store and update text sty
 }
 ```
 
-### Price
+## Price styling
 
-#### CSS classes
+### CSS classes
 
 | Name                          | Description                                    |
 | ----------------------------- | ---------------------------------------------- |
@@ -201,7 +199,7 @@ Change the colors and the spacing to match your online store and update text sty
 | `.abra-price__item--original` | A modifier class applied to the original price |
 | `.abra-price__item--final`    | A modifier class applied to the final price    |
 
-#### CSS variables
+### CSS variables
 
 | Name                               | Description                                          | Value        |
 | ---------------------------------- | ---------------------------------------------------- | ------------ |
@@ -214,7 +212,7 @@ Change the colors and the spacing to match your online store and update text sty
 | `--abra-final-price-decoration`    | The text decoration of the final price               | none         |
 | `--abra-final-price-font-size`     | The font size of the final price                     | unset        |
 
-#### Example
+### Example
 
 Change the colors and the spacing to match your online store and update text styling
 
