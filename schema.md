@@ -98,7 +98,7 @@ You can use these variables within the `html` property to render promotion-speci
 
 #### Example
 
-_An example of a product block to add slashed pricing on all pages_
+For example, you can change your `.price` element to include a slashed original price and the final price after the promotion is active.
 
 ```json
 {
