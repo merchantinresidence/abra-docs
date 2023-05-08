@@ -200,6 +200,8 @@ You can use these variables within the `html` property to render promotion speci
 
 ### Element block
 
+### Method block
+
 ## Examples
 
 ### Dawn
