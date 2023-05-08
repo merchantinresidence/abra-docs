@@ -27,8 +27,6 @@ To customize your schema, go to "Settings" page and then select "Edit JSON". The
 
 At a high-level, the Abra schema follows this pattern:
 
-The schema has the following shape:
-
 ```json
 {
   "schema": {
@@ -40,6 +38,11 @@ The schema has the following shape:
   }
 }
 ```
+
+| Name            | Description                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------------- |
+| `TEMPLATE_NAME` | all \| home \| product \| product.alternative \| collection \| collection.alternative \| cart |
+| `BLOCK_ID`      | The identifier for the rule. This can be anything that helps you identify what the rule does. |
 
 ## Examples
 
