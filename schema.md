@@ -54,11 +54,11 @@ _The outline of a schema_
 
 The next core concept is blocks. There are 3 categories of blocks we'll be working with:
 
-1. **Object block** - this allows you to dynamically access an object within your promotion. This is typically used for showing updated pricing, or showing additional information about the promotion.
-2. **Element block**
-3. **Method block**
+1. **Object block** - this allows you to dynamically access an object within your promotion
+2. **Element block** - this allows you to render new elements and UI for your promotion
+3. **Method block** - this allows you to control different parts of your storefront for your promotion
 
-### `product` object block
+### Product object block
 
 The `product` block gives you access to the product within the promotion. It'll only apply when the product is eligible for an offer with the active promotion.
 
