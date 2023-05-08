@@ -1,2 +1,4 @@
-- [Home](/)
-- [Schema](schema.md)
+- [Home](/ 'Home | Abra Developer Docs')
+- [Schema](schema.md 'Schema | Abra Developer Docs')
+- [Styling](css.md 'Styling | Abra Developer Docs')
+- [JS SDK](js.md 'JS SDK | Abra Developer Docs')
