@@ -8,7 +8,7 @@ Explore our guides and examples to integrate Abra with your online store.
 
 Theme developers use the Promotion Schema to increase ad conversion and create richer storefront experiences for their buyers.
 
-[Get started >](schema.md)
+[Get started with Promotion Schema](schema.md)
 
 ### Blocks
 
