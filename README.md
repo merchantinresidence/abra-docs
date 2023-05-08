@@ -1,10 +1,10 @@
 # Abra Developer Docs
 
-Explore our guides and examples to integrate Abra with your online store.
+#### Explore our guides and examples to integrate Abra with your online store.
 
 ## Promotion Schema
 
-**Learn how to integrate your promotion with your online store product prices and cart.**
+##### Learn how to integrate your promotion with your online store product prices and cart.
 
 Theme developers use the Promotion Schema to increase ad conversion and create richer storefront experiences for their buyers.
 
