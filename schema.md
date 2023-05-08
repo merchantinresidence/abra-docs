@@ -40,7 +40,7 @@ The schema uses the outline shown below. You can replace the capitalized placeho
 | `PROPERTY_NAME`  | The name of the property you're customizing within the block                                    |
 | `PROPERTY_VALUE` | The value of the property you're customizing within the block                                   |
 
-### Example
+### Example <!-- {docsify-ignore} -->
 
 A promotion using a popup block in the schema
 
@@ -199,9 +199,7 @@ Change your cart item to show the final price and slash the original price
 }
 ```
 
-### Element block
-
-#### Announcemenet bar element block
+### Announcemenet bar element block
 
 The `announcement-bar` block allows you show and update the content of the your announcement bar.
 
@@ -232,7 +230,7 @@ Showing an announcement bar with a gift icon and some text
 }
 ```
 
-#### Banner element block
+### Banner element block
 
 The `banner` block allows you show and update the content of the your banner.
 
@@ -263,7 +261,7 @@ Showing an banner with a discount icon and some text
 }
 ```
 
-#### Popup element block
+### Popup element block
 
 The `popup` block allows you show and update the content of the your popup.
 
@@ -293,9 +291,7 @@ Showing an popup with some text
 }
 ```
 
-### Method block
-
-#### Hide method block
+### Hide method block
 
 The `hide` block allows you to hide an element when the promotion is active.
 
@@ -323,7 +319,7 @@ Hiding your footer
 }
 ```
 
-#### Add class method block
+### Add class method block
 
 The `add-class` block allows you to add a class to an element when the promotion is active.
 
@@ -353,7 +349,7 @@ Adding a `vip-customer` class to the body element
 }
 ```
 
-#### Remove class method block
+### Remove class method block
 
 The `remove-class` block allows you to remove a class to an element when the promotion is active.
 
