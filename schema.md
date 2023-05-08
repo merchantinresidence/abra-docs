@@ -17,7 +17,7 @@ To change your schema, go to the "Settings" page and then select "Edit JSON". Yo
 
 ?> At any point, you can revert to the latest default for your theme by clicking "Revert to default".
 
-_The outline of a schema_
+Here's the outline of the schema:
 
 ```json
 {
@@ -32,15 +32,17 @@ _The outline of a schema_
 }
 ```
 
+You'd replace the all caps placeholder with the following values:
+
 | Name             | Description                                                                                     |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
-| `TEMPLATE`       | all \| home \| product \| product.alternative \| collection \| collection.alternative \| cart   |
+| `TEMPLATE`       | all \| index \| product \| product.alternative \| collection \| collection.alternative \| cart  |
 | `BLOCK_ID`       | The identifier for the block. This can be anything that helps you identify what the block does. |
 | `BLOCK_TYPE`     | The type for the block                                                                          |
 | `PROPERTY_NAME`  | The name of the property you're customizing within the block                                    |
 | `PROPERTY_VALUE` | The value of the property you're customizing within the block                                   |
 
-_An example of an Abra promotion using a popup block in the schema_
+Here's an example of an Abra promotion using a popup block in the schema:
 
 ```json
 {
