@@ -42,7 +42,7 @@ The schema uses the outline shown below. You can replace the capitalized placeho
 
 ### Example
 
-For example, a promotion using a popup block in the schema:
+A promotion using a popup block in the schema
 
 ```json
 {
@@ -94,9 +94,9 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 #### Example
 
-For example, you can change your `.price` element to include a slashed original price and the final price.
+Change your `.price` element to include a slashed original price and the final price
 
-```json
+```liquid
 {
   "schema": {
     "all": {
@@ -135,7 +135,7 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 
 #### Example
 
-For example, you can change the subtotal of your cart drawer to add the total discount.
+Update the subtotal of your cart drawer and add the total discount
 
 ```json
 {
@@ -182,7 +182,7 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 
 #### Example
 
-For example, you can change your cart item to show the final price and slash the original price.
+Change your cart item to show the final price and slash the original price
 
 ```json
 {
