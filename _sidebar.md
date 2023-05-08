@@ -1,0 +1,2 @@
+- [Home](/)
+- [Schema](schema.md)
