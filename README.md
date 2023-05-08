@@ -1,4 +1,4 @@
-# Abra Developer Docs
+# Abra Developer Docs <!-- {docsify-ignore-all} -->
 
 Explore our guides and examples to integrate Abra with your online store.
 
