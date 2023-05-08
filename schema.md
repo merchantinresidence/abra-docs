@@ -15,7 +15,7 @@ Before changing your JSON schema, we recommend that you:
 
 To change your schema, go to the "Settings" page and then select "Edit JSON". You'll see a default schema in the code editor.
 
-?> At any point, you can revert to the latest default for your theme by clicking "Revert to default".
+> At any point, you can revert to the latest default for your theme by clicking "Revert to default".
 
 Here's the outline of the schema:
 
@@ -59,7 +59,7 @@ Here's an example of an Abra promotion using a popup block in the schema:
 
 ## Blocks
 
-There are 3 types of blocks within the schema:
+Blocks are the pieces nested within the schema. There are 3 types of blocks:
 
 1. **Object block** - dynamically access an object and update some HTML
 2. **Element block** - render elements and customize block content from your promotion
@@ -67,25 +67,9 @@ There are 3 types of blocks within the schema:
 
 ### Product object block
 
-The `product` block gives you access to the product within the promotion.
+> Only applies when the product is eligible for the active promotion.
 
-> It'll only apply when the product is eligible for an offer within the active promotion.
-
-_An example of a product block to add slashed pricing on all pages_
-
-```json
-{
-  "schema": {
-    "all": {
-      "slashed-product-price": {
-        "type": "product",
-        "selector": ".price",
-        "html": "<div class=\"price\"><div class=\"price--sale\">{{ final_price }}</div><div class=\"price--regular\">{{ original_price }}</div></div>"
-      }
-    }
-  }
-}
-```
+The `product` block gives you access to the product context.
 
 #### Block properties
 
@@ -111,6 +95,24 @@ You can use these variables within the `html` property to render promotion-speci
 | `{{ title }}`            | The product title                                                                | Bicycle helmet           |
 | `{{ total_discount }}`   | The formatted price discounted from the product after the promotion is activated | $2.00                    |
 | `{{ url }}`              | The product url                                                                  | /products/bicycle-helmet |
+
+#### Example
+
+_An example of a product block to add slashed pricing on all pages_
+
+```json
+{
+  "schema": {
+    "all": {
+      "slashed-product-price": {
+        "type": "product",
+        "selector": ".price",
+        "html": "<div class=\"price\"><div class=\"price--sale\">{{ final_price }}</div><div class=\"price--regular\">{{ original_price }}</div></div>"
+      }
+    }
+  }
+}
+```
 
 ### Cart object block
 
