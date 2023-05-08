@@ -179,24 +179,24 @@ You can use these properties to customize the `cart` block.
 | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | `type`     | cart-item                                                                                                    |
 | `item`     | The DOM selector for the cart items. This selector must select **exactly** the same number of items in cart. |
-| `selector` | The DOM selector for the element                                                                             |
-| `html`     | The HTML markup after the promotion is activated.                                                            |
+| `selector` | The DOM selector for the element you're changing                                                             |
+| `html`     | The HTML template to render after the promotion is activated                                                 |
 | `onevent`  | The JavaScript event name. The event must be dispatched on `window`.                                         |
 
 #### HTML variables
 
 You can use these variables within the `html` property to render promotion specific content.
 
-| Name                        | Description                                                          | Example        |
-| --------------------------- | -------------------------------------------------------------------- | -------------- |
-| `{{ code }}`                | The promotion code                                                   | WELCOME10      |
-| `{{ final_line_price }}`    | The formatted line price after the promotion is applied              | $36.00         |
-| `{{ final_price }}`         | The formatted price after the promotion is applied                   | $18.00         |
-| `{{ handle }}`              | The product handle                                                   | bicycle-helmet |
-| `{{ original_line_price }}` | The formatted line price before the promotion is applied             | $40.00         |
-| `{{ original_price }}`      | The formatted price before the promotion is applied                  | $20.00         |
-| `{{ quantity }}`            | The cart item quantity                                               | 2              |
-| `{{ total_discount }}`      | The formatted price discounted from the cart item with the promotion | $4.00          |
+| Name                        | Description                                                          | Example                  |
+| --------------------------- | -------------------------------------------------------------------- | ------------------------ |
+| `{{ code }}`                | The promotion code                                                   | WELCOME10                |
+| `{{ final_line_price }}`    | The formatted line price after the promotion is applied              | $36.00                   |
+| `{{ final_price }}`         | The formatted price after the promotion is applied                   | $18.00                   |
+| `{{ original_line_price }}` | The formatted line price before the promotion is applied             | $40.00                   |
+| `{{ original_price }}`      | The formatted price before the promotion is applied                  | $20.00                   |
+| `{{ quantity }}`            | The cart item quantity                                               | 2                        |
+| `{{ total_discount }}`      | The formatted price discounted from the cart item with the promotion | $4.00                    |
+| `{{ url }}`                 | The product url                                                      | /products/bicycle-helmet |
 
 ### Element block
 
