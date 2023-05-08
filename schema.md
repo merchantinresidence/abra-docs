@@ -80,7 +80,7 @@ _An example of a product block to add slashed pricing on all pages_
 
 #### Block properties
 
-The properties for the `product` block:
+You can use these properties to customize the `product` block.
 
 | Name       | Description                                                          |
 | ---------- | -------------------------------------------------------------------- |
@@ -91,7 +91,7 @@ The properties for the `product` block:
 
 #### HTML variables
 
-The HTML variables available within the `html` property.
+You can use these variables within the `html` property to render promotion specific content.
 
 | Name                     | Description                                                        | Example                  |
 | ------------------------ | ------------------------------------------------------------------ | ------------------------ |
