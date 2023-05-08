@@ -45,12 +45,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | announcement-bar                                                                                 |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `icon`       | gift \| discount \| percentage \| undefined                                                      |
-| `text`       | The text for the announcement bar                                                                |
+| Name      | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| `type`    | announcement-bar                                                                                 |
+| `onEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`    | gift \| discount \| percentage \| undefined                                                      |
+| `text`    | The text for the announcement bar                                                                |
 
 #### `banner`
 
@@ -68,12 +68,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | banner                                                                                           |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `icon`       | gift \| discount \| percentage \| undefined                                                      |
-| `text`       | The text for the banner                                                                          |
+| Name      | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| `type`    | banner                                                                                           |
+| `onEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`    | gift \| discount \| percentage \| undefined                                                      |
+| `text`    | The text for the banner                                                                          |
 
 #### `popup`
 
@@ -91,12 +91,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | popup                                                                                            |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `icon`       | gift \| discount \| percentage \| undefined                                                      |
-| `text`       | The text for the popup                                                                           |
+| Name      | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| `type`    | popup                                                                                            |
+| `onEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `icon`    | gift \| discount \| percentage \| undefined                                                      |
+| `text`    | The text for the popup                                                                           |
 
 ### Rules
 
@@ -116,12 +116,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | add-class                                                                                        |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `selector`   | The DOM selector for the element                                                                 |
-| `value`      | The class to add to the element                                                                  |
+| Name       | Description                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| `type`     | add-class                                                                                        |
+| `onEvent`  | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector` | The DOM selector for the element                                                                 |
+| `value`    | The class to add to the element                                                                  |
 
 #### `cart`
 
@@ -147,14 +147,14 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | cart                                                                                             |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `discounts`  | The `selector` and `html` for the cart discounts                                                 |
-| `items`      | The `selector` and `html` for the cart items                                                     |
-| `subtotal`   | The `selector` and `html` for the cart subtotal                                                  |
-| `total`      | The `selector` and `html` for the cart total                                                     |
+| Name        | Description                                                                                      |
+| ----------- | ------------------------------------------------------------------------------------------------ |
+| `type`      | cart                                                                                             |
+| `onEvent`   | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `discounts` | The `selector` and `html` for the cart discounts                                                 |
+| `items`     | The `selector` and `html` for the cart items                                                     |
+| `subtotal`  | The `selector` and `html` for the cart subtotal                                                  |
+| `total`     | The `selector` and `html` for the cart total                                                     |
 
 #### `remove-class`
 
@@ -172,12 +172,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | remove-class                                                                                     |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `selector`   | The DOM selector for the element                                                                 |
-| `value`      | The class to remove from the element                                                             |
+| Name       | Description                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| `type`     | remove-class                                                                                     |
+| `onEvent`  | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector` | The DOM selector for the element                                                                 |
+| `value`    | The class to remove from the element                                                             |
 
 #### `hide`
 
@@ -194,11 +194,11 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------ |
-| `type`       | hide                                                                                             |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
-| `selector`   | The DOM selector for the element                                                                 |
+| Name       | Description                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------ |
+| `type`     | hide                                                                                             |
+| `onEvent`  | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`. |
+| `selector` | The DOM selector for the element                                                                 |
 
 #### `price`
 
@@ -216,12 +216,12 @@ You can pass in any number of blocks to given templates using this schema. The t
 }
 ```
 
-| Name         | Description                                                                                              |
-| ------------ | -------------------------------------------------------------------------------------------------------- |
-| `type`       | price                                                                                                    |
-| `runOnEvent` | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`.         |
-| `html`       | Custom markup for the price element. You can use `{{regular_price}}` and `{{sale_price}}` in the markup. |
-| `selector`   | The DOM selector for the element                                                                         |
+| Name       | Description                                                                                              |
+| ---------- | -------------------------------------------------------------------------------------------------------- |
+| `type`     | price                                                                                                    |
+| `onEvent`  | The name of JavaScript event to trigger this rule. The event must be dispatched on the `window`.         |
+| `html`     | Custom markup for the price element. You can use `{{regular_price}}` and `{{sale_price}}` in the markup. |
+| `selector` | The DOM selector for the element                                                                         |
 
 ## Global
 
