@@ -8,8 +8,6 @@ This guide will walk you through how your Abra schema works, how it interacts wi
 
 The Abra schema is a core concept to running your promotions. If you've created a promotion in our embedded app, you've already interacted with the schema.
 
-_An example of an Abra promotion using a popup block_
-
 ```json
 {
   "schema" {
@@ -22,6 +20,8 @@ _An example of an Abra promotion using a popup block_
   }
 }
 ```
+
+_An example of an Abra promotion using a popup block_
 
 To customize your schema, go to "Settings" page and then select "Edit JSON". These customizations will apply to every promotion. We recommend using this section to better integrate dynamic pricing and other storefront features with your theme.
 
@@ -38,6 +38,8 @@ At a high-level, the Abra schema follows this pattern:
   }
 }
 ```
+
+_An outline of the Abra schema structure and shape_
 
 | Name            | Description                                                                                   |
 | --------------- | --------------------------------------------------------------------------------------------- |
