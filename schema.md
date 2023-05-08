@@ -85,24 +85,23 @@ You can use these properties to customize the `product` block.
 | Name       | Description                                                          |
 | ---------- | -------------------------------------------------------------------- |
 | `type`     | product                                                              |
-| `selector` | The DOM selector for the element                                     |
-| `html`     | The HTML markup after the promotion is activated.                    |
-| `onEvent`  | The JavaScript event name. The event must be dispatched on `window`. |
+| `selector` | The DOM selector for the element you're changing                     |
+| `html`     | The HTML template to render after the promotion is activated         |
+| `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
 
 #### HTML variables
 
-You can use these variables within the `html` property to render promotion specific content.
+You can use these variables within the `html` property to render promotion-specific content.
 
-| Name                     | Description                                                        | Example                  |
-| ------------------------ | ------------------------------------------------------------------ | ------------------------ |
-| `{{ code }}`             | The promotion code                                                 | WELCOME10                |
-| `{{ compare_at_price }}` | The formatted compare at price of the product                      | $30.00                   |
-| `{{ final_price }}`      | The formatted price of the product after the promotion is applied  | $18.00                   |
-| `{{ handle }}`           | The product handle                                                 | bicycle-helmet           |
-| `{{ original_price }}`   | The formatted price of the product before the promotion is applied | $20.00                   |
-| `{{ title }}`            | The product title                                                  | Bicycle helmet           |
-| `{{ total_discount }}`   | The formatted price discounted from the product with the promotion | $2.00                    |
-| `{{ url }}`              | The product url                                                    | /products/bicycle-helmet |
+| Name                     | Description                                                        | Example                    |
+| ------------------------ | ------------------------------------------------------------------ | -------------------------- |
+| `{{ code }}`             | The promotion code                                                 | WELCOME10                  |
+| `{{ compare_at_price }}` | The formatted compare at price of the product                      | $30.00                     |
+| `{{ final_price }}`      | The formatted price of the product after the promotion is applied  | $18.00                     |
+| `{{ original_price }}`   | The formatted price of the product before the promotion is applied | $20.00                     |
+| `{{ title }}`            | The product title                                                  | Bicycle helmet             |
+| `{{ total_discount }}`   | The formatted price discounted from the product with the promotion | $2.00                      |
+| `{{ url }}`              | The product url                                                    | `/products/bicycle-helmet` |
 
 ### Cart object block
 
@@ -133,7 +132,7 @@ You can use these properties to customize the `cart` block.
 | `type`     | cart                                                                 |
 | `selector` | The DOM selector for the element                                     |
 | `html`     | The HTML markup after the promotion is activated.                    |
-| `onEvent`  | The JavaScript event name. The event must be dispatched on `window`. |
+| `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
 
 #### HTML variables
 
@@ -176,7 +175,7 @@ You can use these properties to customize the `cart` block.
 | `item`     | The DOM selector for the cart items. This selector must select **exactly** the same number of items in cart. |
 | `selector` | The DOM selector for the element                                                                             |
 | `html`     | The HTML markup after the promotion is activated.                                                            |
-| `onEvent`  | The JavaScript event name. The event must be dispatched on `window`.                                         |
+| `onevent`  | The JavaScript event name. The event must be dispatched on `window`.                                         |
 
 #### HTML variables
 
