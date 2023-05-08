@@ -4,28 +4,9 @@ Welcome to Abra's developer docs! We know that your business needs as a merchant
 
 ## Schema
 
-One of the first touchpoints of customization is the schema under the "Settings" section in the app.
+The Abra schema is a core concept to running your promotions. You can hook up richer integration points between Abra and your theme and give your buyers a better experience.
 
-The schema has the following shape:
-
-```json
-{
-  "schema": {
-    "TEMPLATE": {
-      "ID": {
-        "type": ""
-      }
-    }
-  }
-}
-```
-
-You can pass in any number of blocks to given templates using this schema. The template and id are defined as:
-
-| Name       | Description                                                                                   |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| `template` | all \| home \| product \| product.alternative \| collection \| collection.alternative \| cart |
-| `id`       | The identifier for the rule. This can be anything that helps you identify what the rule does. |
+[Read more about the Abra schema](schema.md)
 
 ### Blocks
 
