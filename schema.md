@@ -1,6 +1,6 @@
 # Write your own schema
 
-> If you're new to working with JSON, we recommend that you contact us to integrate with your theme.
+!> If you're new to working with JSON, we recommend that you contact us to integrate with your theme.
 
 Abra uses a JSON schema to configure your Abra blocks. You can change your global schema to integrate better with your theme and create richer online store experiences for buyers.
 
@@ -13,7 +13,9 @@ Before changing your JSON schema, we recommend that you:
 1. Create a backup of your schema
 2. Validate your changes in a [JSON validator](https://jsonformatter.curiousconcept.com/)
 
-To customize your schema, go to the "Settings" page and then select "Edit JSON". You'll see a default schema in the code editor. At any point, you can revert to the latest default for your theme by clicking "Revert to default".
+To change your schema, go to the "Settings" page and then select "Edit JSON". You'll see a default schema in the code editor.
+
+?> At any point, you can revert to the latest default for your theme by clicking "Revert to default".
 
 _The outline of a schema_
 
