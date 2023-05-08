@@ -1,12 +1,14 @@
 # Abra Developer Docs
 
-Welcome to Abra's developer docs! We know that your business needs as a merchant are diverse and we want Abra to work for you, not against you.
+Explore our guides and examples to integrate Abra with your online store.
 
-## Schema
+## Promotion Schema
 
-The Abra schema is a core concept to running your promotions. You can hook up richer integration points between Abra and your theme and give your buyers a better experience.
+**Learn how to integrate your promotion with your online store product prices and cart.**
 
-[Read more about the Abra schema](schema.md)
+Theme developers use the Promotion Schema to increase ad conversion and create richer storefront experiences for their buyers.
+
+[Get started >](schema.md)
 
 ### Blocks
 

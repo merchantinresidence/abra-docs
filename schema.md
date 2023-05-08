@@ -1,6 +1,11 @@
 # Abra Schema
 
+- Choose one audience and write for them, or "For merchants"
+
 > If you're new to working with JSON, we recommend you contact a developer or contact us to help you.
+
+- Create a backup first
+- Validate your JSON
 
 This guide will walk you through how your Abra schema works, how it interacts with your storefront, and what you can do with it.
 
