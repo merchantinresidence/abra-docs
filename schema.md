@@ -1,36 +1,19 @@
-# Abra Schema
+# Write your own schema
 
-- Choose one audience and write for them, or "For merchants"
+> If you're new to working with JSON, we recommend that you contact us to integrate with your theme.
 
-> If you're new to working with JSON, we recommend you contact a developer or contact us to help you.
+Abra uses a JSON schema to configure your Abra blocks. You can change your global schema to integrate better with your theme and create richer online store experiences for buyers.
 
-- Create a backup first
-- Validate your JSON
-
-This guide will walk you through how your Abra schema works, how it interacts with your storefront, and what you can do with it.
+These customizations will apply to **every promotion**.
 
 ## Getting started
 
-The Abra schema is a core concept to running your promotions. If you've created a promotion in our embedded app, you've already interacted with the schema. The promotion creates a schema behind the scenes and Abra's app embed reads it to show your promotion on your storefront.
+Before changing your JSON schema, we recommend that you:
 
-_An example of an Abra promotion using a popup block in the schema_
+1. Create a backup of your schema
+2. Validate your changes in a [JSON validator](https://jsonformatter.curiousconcept.com/)
 
-```json
-{
-  "schema" {
-    "all" {
-      "dd1627cb-428e-4b7d-bc05-dd96cc6cb50a": {
-        "type": "popup",
-        "text": "20% APPLIED"
-      }
-    }
-  }
-}
-```
-
-To customize your schema, go to "Settings" page and then select "Edit JSON". These customizations will apply to **every promotion**. We recommend using this section to integrate dynamic pricing and other storefront features with your theme.
-
-The Abra schema starts with a `schema` key. Within the `schema`, you can specify which template you'd like the block to run on. Within each template, you specify a block identifier and the properties for the given block. The block identifier can be anything to help you remember what the rule does - just remember is has to be unique.
+To customize your schema, go to the "Settings" page and then select "Edit JSON". You'll see a default schema in the code editor. At any point, you can revert to the latest default for your theme by clicking "Revert to default".
 
 _The outline of a schema_
 
@@ -55,13 +38,28 @@ _The outline of a schema_
 | `PROPERTY_NAME`  | The name of the property you're customizing within the block                                    |
 | `PROPERTY_VALUE` | The value of the property you're customizing within the block                                   |
 
+_An example of an Abra promotion using a popup block in the schema_
+
+```json
+{
+  "schema" {
+    "all" {
+      "dd1627cb-428e-4b7d-bc05-dd96cc6cb50a": {
+        "type": "popup",
+        "text": "20% APPLIED"
+      }
+    }
+  }
+}
+```
+
 ## Blocks
 
-The next core concept is blocks. There are 3 categories of blocks we'll be working with:
+There are 3 types of blocks within the schema:
 
-1. **Object block** - this allows you to dynamically access an object within your promotion
-2. **Element block** - this allows you to render new elements and UI for your promotion
-3. **Method block** - this allows you to control different parts of your storefront for your promotion
+1. **Object block** - dynamically access an object and update some HTML
+2. **Element block** - render elements and customize block content from your promotion
+3. **Method block** - manipulate different parts of your storefront with these helpers
 
 ### Product object block
 
