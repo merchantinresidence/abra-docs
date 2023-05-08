@@ -1,6 +1,6 @@
 # Abra Developer Docs
 
-**Explore our guides and examples to integrate Abra with your online store.**
+Explore our guides and examples to integrate Abra with your online store.
 
 ## Schema
 
