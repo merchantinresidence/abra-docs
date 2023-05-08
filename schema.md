@@ -60,7 +60,9 @@ The next core concept is blocks. There are 3 categories of blocks we'll be worki
 
 ### Product object block
 
-The `product` block gives you access to the product within the promotion. It'll only apply when the product is eligible for an offer within the active promotion.
+The `product` block gives you access to the product within the promotion.
+
+> It'll only apply when the product is eligible for an offer within the active promotion.
 
 _An example of a product block to add slashed pricing on all pages_
 
@@ -105,7 +107,9 @@ You can use these variables within the `html` property to render promotion-speci
 
 ### Cart object block
 
-The `cart` block gives you access to the cart within the promotion. It'll only apply when a cart item within the cart is eligible for an offer within the active promotion.
+The `cart` block gives you access to the cart within the promotion.
+
+> It'll only apply when a cart item within the cart is eligible for an offer within the active promotion.
 
 _An example of a cart block to add the total discount to the cart drawer on all pages_
 
@@ -130,13 +134,13 @@ You can use these properties to customize the `cart` block.
 | Name       | Description                                                          |
 | ---------- | -------------------------------------------------------------------- |
 | `type`     | cart                                                                 |
-| `selector` | The DOM selector for the element                                     |
-| `html`     | The HTML markup after the promotion is activated.                    |
+| `selector` | The DOM selector for the element you're changing                     |
+| `html`     | The HTML template to render after the promotion is activated         |
 | `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
 
 #### HTML variables
 
-You can use these variables within the `html` property to render promotion specific content.
+You can use these variables within the `html` property to render promotion-specific content.
 
 | Name                   | Description                                            | Example   |
 | ---------------------- | ------------------------------------------------------ | --------- |
@@ -146,7 +150,9 @@ You can use these variables within the `html` property to render promotion speci
 
 ### Cart item object block
 
-The `cart-item` block gives you access to the cart items within the promotion. It'll only apply when the cart item is eligible for an offer within the active promotion.
+The `cart-item` block gives you access to the cart items within the promotion.
+
+> It'll only apply when the cart item is eligible for an offer within the active promotion.
 
 _An example of a cart item block to slashed pricing on the cart page_
 
