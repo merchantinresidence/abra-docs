@@ -93,15 +93,15 @@ You can use these properties to customize the `product` block.
 
 You can use these variables within the `html` property to render promotion-specific content.
 
-| Name                     | Description                                                        | Example                    |
-| ------------------------ | ------------------------------------------------------------------ | -------------------------- |
-| `{{ code }}`             | The promotion code                                                 | WELCOME10                  |
-| `{{ compare_at_price }}` | The formatted compare at price of the product                      | $30.00                     |
-| `{{ final_price }}`      | The formatted price of the product after the promotion is applied  | $18.00                     |
-| `{{ original_price }}`   | The formatted price of the product before the promotion is applied | $20.00                     |
-| `{{ title }}`            | The product title                                                  | Bicycle helmet             |
-| `{{ total_discount }}`   | The formatted price discounted from the product with the promotion | $2.00                      |
-| `{{ url }}`              | The product url                                                    | `/products/bicycle-helmet` |
+| Name                     | Description                                                                      | Example                    |
+| ------------------------ | -------------------------------------------------------------------------------- | -------------------------- |
+| `{{ code }}`             | The active promotion code                                                        | WELCOME10                  |
+| `{{ compare_at_price }}` | The formatted compare at price of the product                                    | $30.00                     |
+| `{{ final_price }}`      | The formatted price of the product after the promotion is activated              | $18.00                     |
+| `{{ original_price }}`   | The formatted price of the product before the promotion is activated             | $20.00                     |
+| `{{ title }}`            | The product title                                                                | Bicycle helmet             |
+| `{{ total_discount }}`   | The formatted price discounted from the product after the promotion is activated | $2.00                      |
+| `{{ url }}`              | The product url                                                                  | `/products/bicycle-helmet` |
 
 ### Cart object block
 
