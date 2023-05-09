@@ -82,18 +82,19 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 #### HTML variables
 
-| Name                  | Description                                                                                                                                                                      | Example                  |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `code`                | The active promotion code                                                                                                                                                        | WELCOME10                |
-| `compare_at_price`    | The formatted compare at price of the product                                                                                                                                    | $30.00                   |
-| `final_price`         | The formatted price of the product after the promotion is activated                                                                                                              | $18.00                   |
-| `html_final_price`    | The formatted price parsed from the selected element's text content after the promotion is activated<br>Note: your `selector` should target an element with only money inside it |
-| $18.00                |
-| `html_original_price` | The formatted price parsed from the selected element's text content after the promotion is activated<br>Note: your `selector` should target an element with only money inside it | $18.00                   |
-| `original_price`      | The formatted price of the product before the promotion is activated                                                                                                             | $20.00                   |
-| `title`               | The product title                                                                                                                                                                | Bicycle helmet           |
-| `total_discount`      | The formatted price discounted from the product after the promotion is activated                                                                                                 | $2.00                    |
-| `url`                 | The product url                                                                                                                                                                  | /products/bicycle-helmet |
+| Name                              | Description                                                                                                                                                                      | Example                  |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `code`                            | The active promotion code                                                                                                                                                        | WELCOME10                |
+| `compare_at_price`                | The formatted compare at price of the product                                                                                                                                    | $30.00                   |
+| `final_price`                     | The formatted price of the product after the promotion is activated                                                                                                              | $18.00                   |
+| `html_final_price`                | The formatted price parsed from the selected element's text content after the promotion is activated<br>Note: your `selector` should target an element with only money inside it | $18.00                   |
+| `html_original_price`             | The formatted price parsed from the selected element's text content after the promotion is activated<br>Note: your `selector` should target an element with only money inside it | $18.00                   |
+| `original_price`                  | The formatted price of the product before the promotion is activated                                                                                                             | $20.00                   |
+| `selected_variant.final_price`    | The formatted price of the selected variant after the promotion is activated                                                                                                     | $18.00                   |
+| `selected_variant.original_price` | The formatted price of the selected variant before the promotion is activated                                                                                                    | $20.00                   |
+| `title`                           | The product title                                                                                                                                                                | Bicycle helmet           |
+| `total_discount`                  | The formatted price discounted from the product after the promotion is activated                                                                                                 | $2.00                    |
+| `url`                             | The product url                                                                                                                                                                  | /products/bicycle-helmet |
 
 #### Example
 
