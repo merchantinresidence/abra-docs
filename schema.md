@@ -133,11 +133,13 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 
 #### HTML variables
 
-| Name             | Description                                            | Example   |
-| ---------------- | ------------------------------------------------------ | --------- |
-| `code`           | The promotion code                                     | WELCOME10 |
-| `subtotal_price` | The formatted subtotal price of the cart               | $20.00    |
-| `total_discount` | The formatted price of all discounts for the promotion | $2.00     |
+| Name                      | Description                                                                | Example   |
+| ------------------------- | -------------------------------------------------------------------------- | --------- |
+| `code`                    | The promotion code                                                         | WELCOME10 |
+| `final_subtotal_price`    | The formatted subtotal price of the cart after the promotion is activated  | $18.00    |
+| `original_subtotal_price` | The formatted subtotal price of the cart before the promotion is activated | $20.00    |
+| `subtotal_price`          | Alias for `final_subtotal_price`                                           | $18.00    |
+| `total_discount`          | The formatted price of all discounts for the promotion                     | $2.00     |
 
 #### Example
 
@@ -150,7 +152,7 @@ Update the subtotal of your cart drawer and add the total discount
       "cart-drawer-subtotal": {
         "type": "cart",
         "selector": "#CartDrawer .cart-drawer__footer .totals__subtotal-value",
-        "html": "<p class=\"totals__subtotal-value\">{{ subtotal_price }} (-{{ total_discount }})</p>"
+        "html": "<p class=\"totals__subtotal-value\">{{ final_subtotal_price }} (-{{ total_discount }})</p>"
       }
     }
   }
