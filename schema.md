@@ -73,13 +73,13 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 #### Block properties
 
-| Name                   | Description                                                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `type`                 | product                                                                                                           |
-| `container` (optional) | The DOM selector for the element wrapping the product. This element must contain an `<a>` linking to the product. |
-| `selector`             | The DOM selector for the element you're changing                                                                  |
-| `html`                 | The HTML template to render after the promotion is activated                                                      |
-| `onevent`              | The JavaScript event name. The event must be dispatched on `window`.                                              |
+| Name        | Description                                                                                                                  |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `type`      | product                                                                                                                      |
+| `container` | (optional) The DOM selector for the element wrapping the product. This element must contain an `<a>` linking to the product. |
+| `selector`  | The DOM selector for the element you're changing                                                                             |
+| `html`      | The HTML template to render after the promotion is activated                                                                 |
+| `onevent`   | (optional) The JavaScript event name. The event must be dispatched on `window`.                                              |
 
 #### HTML variables
 
@@ -125,12 +125,12 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 
 #### Block properties
 
-| Name       | Description                                                          |
-| ---------- | -------------------------------------------------------------------- |
-| `type`     | cart                                                                 |
-| `selector` | The DOM selector for the element you're changing                     |
-| `html`     | The HTML template to render after the promotion is activated         |
-| `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
+| Name       | Description                                                                     |
+| ---------- | ------------------------------------------------------------------------------- |
+| `type`     | cart                                                                            |
+| `selector` | The DOM selector for the element you're changing                                |
+| `html`     | The HTML template to render after the promotion is activated                    |
+| `onevent`  | (optional) The JavaScript event name. The event must be dispatched on `window`. |
 
 #### HTML variables
 
@@ -174,7 +174,7 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 | `item`     | The DOM selector for the cart items. This selector must select **exactly** the same number of items in cart. |
 | `selector` | The DOM selector for the element you're changing                                                             |
 | `html`     | The HTML template to render after the promotion is activated                                                 |
-| `onevent`  | The JavaScript event name. The event must be dispatched on `window`.                                         |
+| `onevent`  | (optional) The JavaScript event name. The event must be dispatched on `window`.                              |
 
 #### HTML variables
 
@@ -214,12 +214,12 @@ The `announcement-bar` block allows you show and update the content of the your 
 
 #### Block properties
 
-| Name      | Description                                                          |
-| --------- | -------------------------------------------------------------------- |
-| `type`    | announcement-bar                                                     |
-| `icon`    | discount \| gift \| percentage                                       |
-| `text`    | The announcement bar's text content                                  |
-| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+| Name      | Description                                                                     |
+| --------- | ------------------------------------------------------------------------------- |
+| `type`    | announcement-bar                                                                |
+| `icon`    | (optional) discount \| gift \| percentage                                       |
+| `text`    | The announcement bar's text content                                             |
+| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
 
 #### Example
 
@@ -245,12 +245,12 @@ The `banner` block allows you show and update the content of the your banner.
 
 #### Block properties
 
-| Name      | Description                                                          |
-| --------- | -------------------------------------------------------------------- |
-| `type`    | banner                                                               |
-| `icon`    | discount \| gift \| percentage                                       |
-| `text`    | The banner's text content                                            |
-| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+| Name      | Description                                                                     |
+| --------- | ------------------------------------------------------------------------------- |
+| `type`    | banner                                                                          |
+| `icon`    | (optional) discount \| gift \| percentage                                       |
+| `text`    | The banner's text content                                                       |
+| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
 
 #### Example
 
@@ -276,12 +276,12 @@ The `popup` block allows you show and update the content of the your popup.
 
 #### Block properties
 
-| Name      | Description                                                          |
-| --------- | -------------------------------------------------------------------- |
-| `type`    | popup                                                                |
-| `icon`    | discount \| gift \| percentage                                       |
-| `text`    | The popup's text content                                             |
-| `onevent` | The JavaScript event name. The event must be dispatched on `window`. |
+| Name      | Description                                                                     |
+| --------- | ------------------------------------------------------------------------------- |
+| `type`    | popup                                                                           |
+| `icon`    | (optional) discount \| gift \| percentage                                       |
+| `text`    | The popup's text content                                                        |
+| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
 
 #### Example
 
