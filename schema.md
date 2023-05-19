@@ -73,12 +73,13 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 #### Block properties
 
-| Name       | Description                                                          |
-| ---------- | -------------------------------------------------------------------- |
-| `type`     | product                                                              |
-| `selector` | The DOM selector for the element you're changing                     |
-| `html`     | The HTML template to render after the promotion is activated         |
-| `onevent`  | The JavaScript event name. The event must be dispatched on `window`. |
+| Name                   | Description                                                                                                       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `type`                 | product                                                                                                           |
+| `container` (optional) | The DOM selector for the element wrapping the product. This element must contain an `<a>` linking to the product. |
+| `selector`             | The DOM selector for the element you're changing                                                                  |
+| `html`                 | The HTML template to render after the promotion is activated                                                      |
+| `onevent`              | The JavaScript event name. The event must be dispatched on `window`.                                              |
 
 #### HTML variables
 
