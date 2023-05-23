@@ -81,7 +81,7 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 | `html`      | The HTML template to render after the promotion is activated                                                                 |
 | `onevent`   | (optional) The JavaScript event name. The event must be dispatched on `window`.                                              |
 
-#### HTML variables
+#### Liquid variables
 
 | Name                                | Description                                                                                                                                                                      | Example                  |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
@@ -132,7 +132,7 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 | `html`     | The HTML template to render after the promotion is activated                    |
 | `onevent`  | (optional) The JavaScript event name. The event must be dispatched on `window`. |
 
-#### HTML variables
+#### Liquid variables
 
 | Name                      | Description                                                                | Example   |
 | ------------------------- | -------------------------------------------------------------------------- | --------- |
@@ -176,7 +176,7 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 | `html`     | The HTML template to render after the promotion is activated                                                 |
 | `onevent`  | (optional) The JavaScript event name. The event must be dispatched on `window`.                              |
 
-#### HTML variables
+#### Liquid variables
 
 | Name                  | Description                                                          | Example                  |
 | --------------------- | -------------------------------------------------------------------- | ------------------------ |
