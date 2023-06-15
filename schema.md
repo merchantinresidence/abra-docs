@@ -1,6 +1,6 @@
 # Write your own schema
 
-!> If you're new to working with JSON, we recommend that you [contact us](mailto:help@abrapromotions.com) to integrate with your theme.
+!> If you're new to working with JSON, we recommend that you [contact us](mailto:help@abrapromotions.com?subject=Abra integration help) to integrate with your theme.
 
 Abra uses a JSON schema to configure your Abra blocks. You can change your global schema to integrate better with your theme and create richer online store experiences for buyers.
 
