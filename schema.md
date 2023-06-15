@@ -83,19 +83,19 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 
 #### Liquid variables
 
-| Name                                | Description                                                                               | Example                  |
-| ----------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------ |
-| `code`                              | The active promotion code                                                                 | WELCOME10                |
-| `compare_at_price`                  | The formatted compare at price of the product                                             | $30.00                   |
-| `final_price`                       | The formatted price of the product after the promotion is activated                       | $18.00                   |
-| `original_price`                    | The formatted price of the product before the promotion is activated                      | $20.00                   |
-| `selected_variant.compare_at_price` | The formatted compare at price of the selected variant                                    | $18.00                   |
-| `selected_variant.final_price`      | The formatted price of the selected variant after the promotion is activated              | $18.00                   |
-| `selected_variant.original_price`   | The formatted price of the selected variant before the promotion is activated             | $20.00                   |
-| `selected_variant.total_discount`   | The formatted price discounted from the selected variant after the promotion is activated | $20.00                   |
-| `title`                             | The product title                                                                         | Bicycle helmet           |
-| `total_discount`                    | The formatted price discounted from the product after the promotion is activated          | $2.00                    |
-| `url`                               | The product url                                                                           | /products/bicycle-helmet |
+| Name                                | Description                                                                                                                                             | Example                  |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `code`                              | The active promotion code                                                                                                                               | WELCOME10                |
+| `compare_at_price`                  | The formatted compare at price of the product                                                                                                           | $30.00                   |
+| `final_price`                       | The formatted price of the product after the promotion is activated                                                                                     | $18.00                   |
+| `original_price`                    | The formatted price of the product before the promotion is activated                                                                                    | $20.00                   |
+| `selected_variant.compare_at_price` | The formatted compare at price of the selected variant                                                                                                  | $18.00                   |
+| `selected_variant.final_price`      | The formatted price of the selected variant after the promotion is activated                                                                            | $18.00                   |
+| `selected_variant.original_price`   | The formatted price of the selected variant before the promotion is activated                                                                           | $20.00                   |
+| `selected_variant.total_discount`   | The formatted price discounted from the selected variant after the promotion is activated                                                               | $20.00                   |
+| `title`                             | The product title                                                                                                                                       | Bicycle helmet           |
+| `total_discount`                    | The formatted price discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | $2.00                    |
+| `url`                               | The product url                                                                                                                                         | /products/bicycle-helmet |
 
 #### Example
 
@@ -132,15 +132,13 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 
 #### Liquid variables
 
-| Name                        | Description                                                                                                                                   | Example   |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| `code`                      | The promotion code                                                                                                                            | WELCOME10 |
-| `compare_at_total_discount` | The formatted price of all discounts for the promotion based on the compare at price                                                          | $2.00     |
-| `final_subtotal_price`      | The formatted subtotal price of the cart after the promotion is activated                                                                     | $18.00    |
-| `original_subtotal_price`   | The formatted subtotal price of the cart before the promotion is activated                                                                    | $20.00    |
-| `original_total_discount`   | The formatted price of all discounts for the promotion based on the original price                                                            | $2.00     |
-| `subtotal_price`            | Alias for `final_subtotal_price`                                                                                                              | $18.00    |
-| `total_discount`            | The formatted price of all discounts for the promotion. It'll use the "compare at" pricing if the cart item block has a "compare at" variable | $2.00     |
+| Name                      | Description                                                                                                                                   | Example   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `code`                    | The promotion code                                                                                                                            | WELCOME10 |
+| `final_subtotal_price`    | The formatted subtotal price of the cart after the promotion is activated                                                                     | $18.00    |
+| `original_subtotal_price` | The formatted subtotal price of the cart before the promotion is activated                                                                    | $20.00    |
+| `subtotal_price`          | Alias for `final_subtotal_price`                                                                                                              | $18.00    |
+| `total_discount`          | The formatted price of all discounts for the promotion. It'll use the "compare at" pricing if the cart item block has a "compare at" variable | $2.00     |
 
 #### Example
 
@@ -178,16 +176,18 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 
 #### Liquid variables
 
-| Name                  | Description                                                          | Example                  |
-| --------------------- | -------------------------------------------------------------------- | ------------------------ |
-| `code`                | The promotion code                                                   | WELCOME10                |
-| `final_line_price`    | The formatted line price after the promotion is applied              | $36.00                   |
-| `final_price`         | The formatted price after the promotion is applied                   | $18.00                   |
-| `original_line_price` | The formatted line price before the promotion is applied             | $40.00                   |
-| `original_price`      | The formatted price before the promotion is applied                  | $20.00                   |
-| `quantity`            | The cart item quantity                                               | 2                        |
-| `total_discount`      | The formatted price discounted from the cart item with the promotion | $4.00                    |
-| `url`                 | The product url                                                      | /products/bicycle-helmet |
+| Name                    | Description                                                                                                                                 | Example                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `code`                  | The promotion code                                                                                                                          | WELCOME10                |
+| `compare_at_line_price` | The formatted compare at line price before the promotion is applied                                                                         | $40.00                   |
+| `compare_at_price`      | The formatted compare at price before the promotion is applied                                                                              | $20.00                   |
+| `final_line_price`      | The formatted line price after the promotion is applied                                                                                     | $36.00                   |
+| `final_price`           | The formatted price after the promotion is applied                                                                                          | $18.00                   |
+| `original_line_price`   | The formatted line price before the promotion is applied                                                                                    | $40.00                   |
+| `original_price`        | The formatted price before the promotion is applied                                                                                         | $20.00                   |
+| `quantity`              | The cart item quantity                                                                                                                      | 2                        |
+| `total_discount`        | The formatted price discounted from the cart item with the promotion. It'll use the "compare at" pricing if there's a "compare at" variable | $4.00                    |
+| `url`                   | The product url                                                                                                                             | /products/bicycle-helmet |
 
 #### Example
 
