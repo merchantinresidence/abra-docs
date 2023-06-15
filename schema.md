@@ -176,18 +176,19 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 
 #### Liquid variables
 
-| Name                    | Description                                                                                                                                 | Example                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `code`                  | The promotion code                                                                                                                          | WELCOME10                |
-| `compare_at_line_price` | The formatted compare at line price before the promotion is applied                                                                         | $40.00                   |
-| `compare_at_price`      | The formatted compare at price before the promotion is applied                                                                              | $20.00                   |
-| `final_line_price`      | The formatted line price after the promotion is applied                                                                                     | $36.00                   |
-| `final_price`           | The formatted price after the promotion is applied                                                                                          | $18.00                   |
-| `original_line_price`   | The formatted line price before the promotion is applied                                                                                    | $40.00                   |
-| `original_price`        | The formatted price before the promotion is applied                                                                                         | $20.00                   |
-| `quantity`              | The cart item quantity                                                                                                                      | 2                        |
-| `total_discount`        | The formatted price discounted from the cart item with the promotion. It'll use the "compare at" pricing if there's a "compare at" variable | $4.00                    |
-| `url`                   | The product url                                                                                                                             | /products/bicycle-helmet |
+| Name                    | Description                                                                                                                                                    | Example                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `code`                  | The promotion code                                                                                                                                             | WELCOME10                |
+| `compare_at_line_price` | The formatted compare at line price before the promotion is applied                                                                                            | $40.00                   |
+| `compare_at_price`      | The formatted compare at price before the promotion is applied                                                                                                 | $20.00                   |
+| `final_line_price`      | The formatted line price after the promotion is applied                                                                                                        | $36.00                   |
+| `final_price`           | The formatted price after the promotion is applied                                                                                                             | $18.00                   |
+| `original_line_price`   | The formatted line price before the promotion is applied                                                                                                       | $40.00                   |
+| `original_price`        | The formatted price before the promotion is applied                                                                                                            | $20.00                   |
+| `quantity`              | The cart item quantity                                                                                                                                         | 2                        |
+| `total_discount`        | The formatted price discounted from the cart item with the promotion. It'll use the "compare at" pricing if there's a "compare at" variable                    | $4.00                    |
+| `total_line_discount`   | The formatted price discounted from the cart item including quantity with the promotion. It'll use the "compare at" pricing if there's a "compare at" variable | $8.00                    |
+| `url`                   | The product url                                                                                                                                                | /products/bicycle-helmet |
 
 #### Example
 
