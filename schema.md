@@ -132,13 +132,15 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 
 #### Liquid variables
 
-| Name                      | Description                                                                | Example   |
-| ------------------------- | -------------------------------------------------------------------------- | --------- |
-| `code`                    | The promotion code                                                         | WELCOME10 |
-| `final_subtotal_price`    | The formatted subtotal price of the cart after the promotion is activated  | $18.00    |
-| `original_subtotal_price` | The formatted subtotal price of the cart before the promotion is activated | $20.00    |
-| `subtotal_price`          | Alias for `final_subtotal_price`                                           | $18.00    |
-| `total_discount`          | The formatted price of all discounts for the promotion                     | $2.00     |
+| Name                        | Description                                                                                                                                   | Example   |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `code`                      | The promotion code                                                                                                                            | WELCOME10 |
+| `compare_at_total_discount` | The formatted price of all discounts for the promotion based on the compare at price                                                          | $2.00     |
+| `final_subtotal_price`      | The formatted subtotal price of the cart after the promotion is activated                                                                     | $18.00    |
+| `original_subtotal_price`   | The formatted subtotal price of the cart before the promotion is activated                                                                    | $20.00    |
+| `original_total_discount`   | The formatted price of all discounts for the promotion based on the original price                                                            | $2.00     |
+| `subtotal_price`            | Alias for `final_subtotal_price`                                                                                                              | $18.00    |
+| `total_discount`            | The formatted price of all discounts for the promotion. It'll use the "compare at" pricing if the cart item block has a "compare at" variable | $2.00     |
 
 #### Example
 
