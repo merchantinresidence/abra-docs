@@ -12,7 +12,7 @@ Abra uses a JSON schema to configure the integration points with your theme. You
 
 ## CSS Styling <!-- {docsify-ignore} -->
 
-**Learn how to customize the styling for your online stoere and your promotion blocks.**
+**Learn how to customize the styling for your online store and your promotion blocks.**
 
 Abra has many CSS variables and CSS classes you can override to style your online store when a promotion is active.
 
@@ -22,6 +22,6 @@ Abra has many CSS variables and CSS classes you can override to style your onlin
 
 **Learn how to listen to and dispatch JavaScript events for advanced customizations with promotions.**
 
-Abra provides a JavaScript SDK with many helpers, events and dispatchers for the different parts of your promotions. You can programatically control these blocks and make custom experiences on your online store.
+Abra provides a JavaScript SDK with many helpers, events and dispatchers for the different parts of your promotions. You can programmatically control these blocks and make custom experiences on your online store.
 
 [Get started 👉](js.md)
