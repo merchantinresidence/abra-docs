@@ -2,7 +2,7 @@
 
 !> If you're new to working with JavaScript, we recommend that you contact us to integrate with your theme.
 
-Abra provides a JavaScript SDK with many helpers, events and dispatchers for the different parts of your promotions. You can programatically control these blocks and make custom experiences on your online store.
+Abra provides a JavaScript SDK with many helpers, events and dispatchers for the different parts of your promotions. You can programmatically control these blocks and make custom experiences on your online store.
 
 ## Promotion
 
@@ -10,7 +10,7 @@ Abra provides a JavaScript SDK with many helpers, events and dispatchers for the
 
 #### `activate`
 
-You can call this function to programatically announce and apply a promotion.
+You can call this function to programmatically announce and apply a promotion.
 
 ```javascript
 window.Abra.activate('YOUR_CODE');
@@ -18,7 +18,7 @@ window.Abra.activate('YOUR_CODE');
 
 #### `deactivate`
 
-You can call this function to programatically deactivate a promotion.
+You can call this function to programmatically deactivate a promotion.
 
 ```javascript
 window.Abra.deactivate('YOUR_CODE');
@@ -70,7 +70,7 @@ removeListener();
 
 #### `show`
 
-You call this function to programatically show the announcement bar.
+You call this function to programmatically show the announcement bar.
 
 ```javascript
 window.Abra.AnnouncementBar.show();
@@ -84,7 +84,7 @@ window.Abra.AnnouncementBar.show({
 
 #### `hide`
 
-You call this function to programatically hide the announcement bar.
+You call this function to programmatically hide the announcement bar.
 
 ```javascript
 window.Abra.AnnouncementBar.hide();
@@ -92,7 +92,7 @@ window.Abra.AnnouncementBar.hide();
 
 #### `render`
 
-You call this function to programatically render the announcement bar with new options.
+You call this function to programmatically render the announcement bar with new options.
 
 | Name | Description                | Value                                       |
 | ---- | -------------------------- | ------------------------------------------- |
@@ -148,7 +148,7 @@ removeListener();
 
 #### `show`
 
-You call this function to programatically show a banner, where the first parameter is the identifier from the app block settings.
+You call this function to programmatically show a banner, where the first parameter is the identifier from the app block settings.
 
 ```javascript
 window.Abra.Banner.show('default');
@@ -162,7 +162,7 @@ window.Abra.Banner.show('default', {
 
 #### `hide`
 
-You call this function to programatically hide a banner, where the first parameter is the identifier from the app block settings.
+You call this function to programmatically hide a banner, where the first parameter is the identifier from the app block settings.
 
 ```javascript
 window.Abra.Banner.hide('default');
@@ -210,7 +210,7 @@ removeListener();
 
 #### `show`
 
-You call this function to programatically show the popup.
+You call this function to programmatically show the popup.
 
 ```javascript
 window.Abra.Popup.show();
@@ -224,7 +224,7 @@ window.Abra.Popup.show({
 
 #### `hide`
 
-You call this function to programatically hide the popup.
+You call this function to programmatically hide the popup.
 
 ```javascript
 window.Abra.Popup.hide();
