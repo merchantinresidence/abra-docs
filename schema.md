@@ -117,7 +117,7 @@ Change your `.price` element to include a slashed original price and the final p
 
 ### Cart object block
 
-> Only apply when an item within the cart is eligible the active promotion.
+> Only apply when an item within the cart is eligible for the active promotion.
 
 The `cart` block allows you to replace a block of HTML with new HTML. You have access to the cart context in the new HTML.
 
@@ -209,9 +209,9 @@ Change your cart item to show the final price and slash the original price
 }
 ```
 
-### Announcemenet bar element block
+### Announcement bar element block
 
-The `announcement-bar` block allows you show and update the content of the your announcement bar.
+The `announcement-bar` block allows you to show and update the content of your announcement bar.
 
 #### Block properties
 
@@ -242,7 +242,7 @@ Showing an announcement bar with a gift icon and some text
 
 ### Banner element block
 
-The `banner` block allows you show and update the content of the your banner.
+The `banner` block allows you to show and update the content of your banner.
 
 #### Block properties
 
@@ -255,7 +255,7 @@ The `banner` block allows you show and update the content of the your banner.
 
 #### Example
 
-Showing an banner with a discount icon and some text
+Showing a banner with a discount icon and some text
 
 ```json
 {
@@ -273,7 +273,7 @@ Showing an banner with a discount icon and some text
 
 ### Popup element block
 
-The `popup` block allows you show and update the content of the your popup.
+The `popup` block allows you to show and update the content of your popup.
 
 #### Block properties
 
@@ -286,7 +286,7 @@ The `popup` block allows you show and update the content of the your popup.
 
 #### Example
 
-Showing an popup with some text
+Showing a popup with some text
 
 ```json
 {
