@@ -50,7 +50,13 @@ A promotion using a popup block in the schema
     "all" {
       "dd1627cb-428e-4b7d-bc05-dd96cc6cb50a": {
         "type": "popup",
-        "text": "20% APPLIED"
+        "persistentState": true,
+        "states": [
+          {
+            "state": "DEFAULT",
+            "text": "20% APPLIED"
+          }
+        ]
       }
     }
   }
@@ -87,6 +93,7 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | `code`                              | The active promotion code                                                                                                                               | WELCOME10                |
 | `compare_at_price`                  | The formatted compare at price of the product                                                                                                           | $30.00                   |
+| `currency.iso_code`                 | The ISO code of the active currency                                                                                                                     | CAD                      |
 | `final_price`                       | The formatted price of the product after the promotion is activated                                                                                     | $18.00                   |
 | `original_price`                    | The formatted price of the product before the promotion is activated                                                                                    | $20.00                   |
 | `selected_variant.compare_at_price` | The formatted compare at price of the selected variant                                                                                                  | $18.00                   |
@@ -135,6 +142,7 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 | Name                      | Description                                                                                                                                   | Example   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | `code`                    | The promotion code                                                                                                                            | WELCOME10 |
+| `currency.iso_code`       | The ISO code of the active currency                                                                                                           | CAD       |
 | `final_subtotal_price`    | The formatted subtotal price of the cart after the promotion is activated                                                                     | $18.00    |
 | `original_subtotal_price` | The formatted subtotal price of the cart before the promotion is activated                                                                    | $20.00    |
 | `subtotal_price`          | Alias for `final_subtotal_price`                                                                                                              | $18.00    |
@@ -181,6 +189,7 @@ The `cart-item` block allows you to replace a block of HTML with new HTML. You h
 | `code`                  | The promotion code                                                                                                                                             | WELCOME10                |
 | `compare_at_line_price` | The formatted compare at line price before the promotion is applied                                                                                            | $40.00                   |
 | `compare_at_price`      | The formatted compare at price before the promotion is applied                                                                                                 | $20.00                   |
+| `currency.iso_code`     | The ISO code of the active currency                                                                                                                            | CAD                      |
 | `final_line_price`      | The formatted line price after the promotion is applied                                                                                                        | $36.00                   |
 | `final_price`           | The formatted price after the promotion is applied                                                                                                             | $18.00                   |
 | `original_line_price`   | The formatted line price before the promotion is applied                                                                                                       | $40.00                   |
@@ -209,18 +218,35 @@ Change your cart item to show the final price and slash the original price
 }
 ```
 
-### Announcemenet bar element block
+### Announcement bar element block
 
 The `announcement-bar` block allows you show and update the content of the your announcement bar.
 
 #### Block properties
 
-| Name      | Description                                                                     |
-| --------- | ------------------------------------------------------------------------------- |
-| `type`    | announcement-bar                                                                |
-| `icon`    | (optional) discount \| gift \| percentage                                       |
-| `text`    | The announcement bar's text content                                             |
-| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
+| Name              | Description                                                                     |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `type`            | announcement-bar                                                                |
+| `persistentState` | Whether the default state is persistent or not.                                 |
+| `states`          | The announcement bar's content by state.                                        |
+| `onevent`         | (optional) The JavaScript event name. The event must be dispatched on `window`. |
+
+#### Block state properties
+
+A block state allows you to show different content based on the state of the promotion and offer.
+
+| Name    | Description                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------- |
+| `icon`  | (optional) discount \| gift \| percentage                                                   |
+| `state` | The name of the state: DEFAULT\| PROGRESS_ZERO \| PROGRESS_ONE \| PROGRESS_OTHER \| SUCCESS |
+| `text`  | The announcement bar's text content.                                                        |
+
+#### Liquid variables
+
+| Name                | Description                         | Example   |
+| ------------------- | ----------------------------------- | --------- |
+| `code`              | The promotion code                  | WELCOME10 |
+| `currency.iso_code` | The ISO code of the active currency | CAD       |
 
 #### Example
 
@@ -232,8 +258,14 @@ Showing an announcement bar with a gift icon and some text
     "all": {
       "gift-announcement-bar": {
         "type": "announcement-bar",
-        "icon": "gift",
-        "text": "FREE GIFT ON ORDERS OVER $50"
+        "persistentState": true,
+        "states": [
+          {
+            "icon": "gift",
+            "state": "DEFAULT",
+            "text": "FREE GIFT ON ORDERS OVER $50"
+          }
+        ]
       }
     }
   }
@@ -246,12 +278,30 @@ The `banner` block allows you show and update the content of the your banner.
 
 #### Block properties
 
-| Name      | Description                                                                     |
-| --------- | ------------------------------------------------------------------------------- |
-| `type`    | banner                                                                          |
-| `icon`    | (optional) discount \| gift \| percentage                                       |
-| `text`    | The banner's text content                                                       |
-| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
+| Name              | Description                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `type`            | banner                                                                                   |
+| `name`            | The identifier for the banner. This must match the identifier in Shopify's Theme Editor. |
+| `persistentState` | Whether the default state is persistent or not.                                          |
+| `states`          | The banner's content by state.                                                           |
+| `onevent`         | (optional) The JavaScript event name. The event must be dispatched on `window`.          |
+
+#### Block state properties
+
+A block state allows you to show different content based on the state of the promotion and offer.
+
+| Name    | Description                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------- |
+| `icon`  | (optional) discount \| gift \| percentage                                                   |
+| `state` | The name of the state: DEFAULT\| PROGRESS_ZERO \| PROGRESS_ONE \| PROGRESS_OTHER \| SUCCESS |
+| `text`  | The banner's text content.                                                                  |
+
+#### Liquid variables
+
+| Name                | Description                         | Example   |
+| ------------------- | ----------------------------------- | --------- |
+| `code`              | The promotion code                  | WELCOME10 |
+| `currency.iso_code` | The ISO code of the active currency | CAD       |
 
 #### Example
 
@@ -263,8 +313,15 @@ Showing an banner with a discount icon and some text
     "all": {
       "gift-banner": {
         "type": "banner",
-        "icon": "discount",
-        "text": "FREE GIFT ON ORDERS OVER $50"
+        "name": "default",
+        "persistentState": true,
+        "states": [
+          {
+            "icon": "discount",
+            "state": "DEFAULT",
+            "text": "FREE GIFT ON ORDERS OVER $50"
+          }
+        ]
       }
     }
   }
@@ -277,12 +334,29 @@ The `popup` block allows you show and update the content of the your popup.
 
 #### Block properties
 
-| Name      | Description                                                                     |
-| --------- | ------------------------------------------------------------------------------- |
-| `type`    | popup                                                                           |
-| `icon`    | (optional) discount \| gift \| percentage                                       |
-| `text`    | The popup's text content                                                        |
-| `onevent` | (optional) The JavaScript event name. The event must be dispatched on `window`. |
+| Name              | Description                                                                     |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `type`            | popup                                                                           |
+| `persistentState` | Whether the default state is persistent or not.                                 |
+| `states`          | The popup's content by state.                                                   |
+| `onevent`         | (optional) The JavaScript event name. The event must be dispatched on `window`. |
+
+#### Block state properties
+
+A block state allows you to show different content based on the state of the promotion and offer.
+
+| Name    | Description                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------- |
+| `icon`  | (optional) discount \| gift \| percentage                                                   |
+| `state` | The name of the state: DEFAULT\| PROGRESS_ZERO \| PROGRESS_ONE \| PROGRESS_OTHER \| SUCCESS |
+| `text`  | The popup's text content                                                                    |
+
+#### Liquid variables
+
+| Name                | Description                         | Example   |
+| ------------------- | ----------------------------------- | --------- |
+| `code`              | The promotion code                  | WELCOME10 |
+| `currency.iso_code` | The ISO code of the active currency | CAD       |
 
 #### Example
 
@@ -294,7 +368,13 @@ Showing an popup with some text
     "all": {
       "custom-popup": {
         "type": "popup",
-        "text": "20% OFF APPLIED"
+        "persistentState": true,
+        "states": [
+          {
+            "state": "DEFAULT",
+            "text": "{{ code }} APPLIED"
+          }
+        ]
       }
     }
   }
