@@ -99,9 +99,11 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 | `selected_variant.compare_at_price` | The formatted compare at price of the selected variant                                                                                                  | $18.00                   |
 | `selected_variant.final_price`      | The formatted price of the selected variant after the promotion is activated                                                                            | $18.00                   |
 | `selected_variant.original_price`   | The formatted price of the selected variant before the promotion is activated                                                                           | $20.00                   |
-| `selected_variant.total_discount`   | The formatted price discounted from the selected variant after the promotion is activated                                                               | $20.00                   |
+| `selected_variant.total_discount_dollar`   | The formatted dollar amount discounted from the selected variant after the promotion is activated                                                               | $20.00                   |
+| `selected_variant.total_discount_percentage`   | The formatted percentage discounted from the selected variant after the promotion is activated                                                               | 10%                   |
 | `title`                             | The product title                                                                                                                                       | Bicycle helmet           |
-| `total_discount`                    | The formatted price discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | $2.00                    |
+| `total_discount_dollar`                    | The formatted dollar amount discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | $2.00                    |
+| `total_discount_percentage`                    | The formatted percentage discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | 10%                    |
 | `url`                               | The product url                                                                                                                                         | /products/bicycle-helmet |
 
 #### Example
@@ -147,7 +149,8 @@ The `cart` block allows you to replace a block of HTML with new HTML. You have a
 | `final_subtotal_price`      | The formatted subtotal price of the cart after the promotion is activated                                                                               | $18.00    |
 | `original_subtotal_price`   | The formatted subtotal price of the cart before the promotion is activated                                                                              | $20.00    |
 | `subtotal_price`            | Alias for `final_subtotal_price`                                                                                                                        | $18.00    |
-| `total_discount`            | The formatted price of all discounts for the promotion. It'll use the "compare at" pricing if the cart block has a `compare_at_subtotal_price` variable | $2.00     |
+| `total_discount_dollar`            | The formatted dollar amount of all discounts for the promotion. It'll use the "compare at" pricing if the cart block has a `compare_at_subtotal_price` variable | $2.00     |
+| `total_discount_percentage`            | The formatted percentage of all discounts for the promotion. It'll use the "compare at" pricing if the cart block has a `compare_at_subtotal_price` variable | 10%     |
 
 #### Example
 
