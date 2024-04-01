@@ -251,6 +251,7 @@ A block state allows you to show different content based on the state of the pro
 | ------------------- | ----------------------------------- | --------- |
 | `code`              | The promotion code                  | WELCOME10 |
 | `currency.iso_code` | The ISO code of the active currency | CAD       |
+| `discount_value`    | The value of a discount used in the promotion | 10%       |
 
 #### Example
 
@@ -306,6 +307,7 @@ A block state allows you to show different content based on the state of the pro
 | ------------------- | ----------------------------------- | --------- |
 | `code`              | The promotion code                  | WELCOME10 |
 | `currency.iso_code` | The ISO code of the active currency | CAD       |
+| `discount_value`    | The value of a discount used in the promotion | 10%       |
 
 #### Example
 
@@ -361,6 +363,7 @@ A block state allows you to show different content based on the state of the pro
 | ------------------- | ----------------------------------- | --------- |
 | `code`              | The promotion code                  | WELCOME10 |
 | `currency.iso_code` | The ISO code of the active currency | CAD       |
+| `discount_value`    | The value of a discount used in the promotion | 10%       |
 
 #### Example
 
