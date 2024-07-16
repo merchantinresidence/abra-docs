@@ -108,10 +108,10 @@ The `product` block allows you to replace a block of HTML with new HTML. You hav
 | `selected_variant.selected_selling_plan.original_price`                    | The formatted selling/subscription plan price of the selected variant before the promotion is activated                                                                                    | $20.00                   |
 | `selected_variant.selected_selling_plan_or_variant.original_price`                    | The formatted selling/subscription plan or variant price of the selected variant before the promotion is activated                                                                                    | $20.00                   |
 | `total_discount_dollar`                    | The formatted dollar amount discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | $2.00                    |
-| `total_discount_percentage`                    | The formatted percentage discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | 10%                    |
 | `selected_variant.total_discount_dollar`   | The formatted dollar amount discounted from the selected variant after the promotion is activated                                                               | $20.00                   |
 | `selected_variant.selected_selling_plan.total_discount_dollar`   | The formatted dollar amount discounted from the selected selling/subscription plan option after the promotion is activated                                                               | $20.00                   |
 | `selected_variant.selected_selling_plan_or_variant.total_discount_dollar`   | The formatted dollar amount discounted from the selected selling/subscription plan option or variant after the promotion is activated                                                               | $20.00                   |
+| `total_discount_percentage`                    | The formatted percentage discounted from the product after the promotion is activated. It'll use the "compare at" pricing if there's a "compare at" variable | 10%                    |
 | `selected_variant.total_discount_percentage`   | The formatted percentage discounted from the selected variant after the promotion is activated                                                               | 10%                   |
 | `selected_variant.selected_selling_plan.total_discount_percentage`   | The formatted percentage amount discounted from the selected selling/subscription plan option after the promotion is activated                                                               | 10%                   |
 | `selected_variant.selected_selling_plan_or_variant.total_discount_percentage`   | The formatted percentage amount discounted from the selected selling/subscription plan option or variant after the promotion is activated                                                               | 10%                   |
@@ -318,6 +318,8 @@ A block state allows you to show different content based on the state of the pro
 | `code`              | The promotion code                  | WELCOME10 |
 | `currency.iso_code` | The ISO code of the active currency | CAD       |
 | `discount_value`    | The value of a discount used in the promotion | 10%       |
+| `offer.progress_total`    | (Gift with purchase banner) Minimum spend amount or quantity of items that need to be added to cart to get the free gift | $20.00       |
+| `offer.progress_remaining`    | (Gift with purchase banner) Amount or quantity remaining to be added to cart to get the free gift | $15.00       |
 
 #### Example
 
