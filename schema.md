@@ -247,7 +247,7 @@ The `announcement-bar` block allows you to show and update the content of your a
 
 #### Block state properties
 
-A block state allows you to show different content based on the state of the promotion and offer.
+A block state allows you to show different content based on the state of the promotion and discount.
 
 | Name    | Description                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------- |
@@ -303,7 +303,7 @@ The `banner` block allows you to show and update the content of your banner.
 
 #### Block state properties
 
-A block state allows you to show different content based on the state of the promotion and offer.
+A block state allows you to show different content based on the state of the promotion and discount.
 
 | Name    | Description                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------- |
@@ -318,8 +318,8 @@ A block state allows you to show different content based on the state of the pro
 | `code`              | The promotion code                  | WELCOME10 |
 | `currency.iso_code` | The ISO code of the active currency | CAD       |
 | `discount_value`    | The value of a discount used in the promotion | 10%       |
-| `offer.progress_total`    | (Gift with purchase banner) Minimum spend amount or quantity of items that need to be added to cart to get the free gift | $20.00       |
-| `offer.progress_remaining`    | (Gift with purchase banner) Amount or quantity remaining to be added to cart to get the free gift | $15.00       |
+| `discount.progress_total`    | (Gift with purchase banner) Minimum spend amount or quantity of items that need to be added to cart to get the free gift | $20.00       |
+| `discount.progress_remaining`    | (Gift with purchase banner) Amount or quantity remaining to be added to cart to get the free gift | $15.00       |
 
 #### Example
 
@@ -361,7 +361,7 @@ The `popup` block allows you to show and update the content of your popup.
 
 #### Block state properties
 
-A block state allows you to show different content based on the state of the promotion and offer.
+A block state allows you to show different content based on the state of the promotion and discount.
 
 | Name    | Description                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------- |
