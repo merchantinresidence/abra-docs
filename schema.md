@@ -493,4 +493,4 @@ Removing a `hidden` class from a navigation item
 
 ## Theme examples
 
-See our [GitHub repository](https://github.com/merchantinresidence/abra-schemas/tree/main/src/themes) for more examples.
+See our [GitHub repository](https://github.com/merchantinresidence/abra-schemas/tree/main/example-schemas) for more examples.
